@@ -1,5 +1,0 @@
-/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/cmake-build-debug/CMakeFiles/MuDip.dir
-/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/cmake-build-debug/lib/pybind11/CMakeFiles/rebuild_cache.dir
-/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/cmake-build-debug/lib/pybind11/CMakeFiles/edit_cache.dir

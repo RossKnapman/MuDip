@@ -1,5 +1,5 @@
-./idea/
+.idea/
 build/
-cmake-build/debug/
+cmake-build-debug/
 MuDip.egg-info/
 .DS_Store
