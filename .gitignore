@@ -176,3 +176,5 @@ CTestTestfile.cmake
 # Misc.
 .DS_Store
 *.cbp
+*.xml
+*.iml
