@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 10/08/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_VECTORFIELDCREATOR_H
 #define INC_3DDIPOLEFIELD_VECTORFIELDCREATOR_H
 
@@ -49,5 +45,6 @@ public:
     py::array_t<double> outputMField();  // Outut moment field in z plane
 
 };
+
 
 #endif //INC_3DDIPOLEFIELD_VECTORFIELDCREATOR_H

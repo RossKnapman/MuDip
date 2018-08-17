@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 10/08/2018.
-//
-
 #include "Cu2OSeO3.h"
 #include "../Sample.h"
 

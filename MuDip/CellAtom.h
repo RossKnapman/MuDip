@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 01/08/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_CELLATOM_H
 #define INC_3DDIPOLEFIELD_CELLATOM_H
 
@@ -17,7 +13,6 @@ private:
     bool flipped;  // Whether or not we flip the spin at that atom site
 
 public:
-
     CellAtom(double x, double y, double z, bool flipped = false);
 
     // Setters

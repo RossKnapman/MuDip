@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 30/07/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_MOMENTFIELD_H
 #define INC_3DDIPOLEFIELD_MOMENTFIELD_H
 
@@ -19,8 +15,7 @@ private:
     py::array_t<double> propagationVector;
     double propagationWavelength;  // The wavelength of each propagation vector, in unit cells
     py::array_t<double> fourierComponent;
-    int type;  // 1 = ferromagnet; 2 = antiferromagnet; 3 = single-k helical state; 4 = triple-k "skyrmion" state
-
+    int type;  // 1 = ferromagnet; 2 = antiferromagnet; 3 = single-k helical state; 4 = triple-k "skyrmion" state (etc. if more states are added)
 public:
 
     // Constructors for various structures

@@ -1,11 +1,5 @@
-//
-// Created by Ross Knapman on 02/08/2018.
-//
-
 #include "Sample.h"
-
 #include <iostream>
-
 #include "LorentzSphere.h"
 
 

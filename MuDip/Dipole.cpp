@@ -1,14 +1,6 @@
-//
-// Created by Ross Knapman on 25/07/2018.
-//
-
 #include "Dipole.h"
-
 #include <iostream>
-#include <vector>
-#include <cmath>
 #include <numeric>
-#include <functional>
 #include "Constants.h"
 
 
@@ -48,6 +40,7 @@ std::vector<double> Dipole::calculateField(double targetX, double targetY, doubl
     }
     rMag = sqrt(rMag);
 
+    // Get the r unit vector
     std::vector<double> rUnit(r.size());
 
     for (int i = 0; i < rUnit.size(); i++)
@@ -55,7 +48,8 @@ std::vector<double> Dipole::calculateField(double targetX, double targetY, doubl
         rUnit[i] = r[i] / rMag;
     }
 
-    double mrInnerProd = 0;  // The m dot rHat inner product in the B-field expression
+    // Evaluate the m dot rHat inner product in the B-field expression
+    double mrInnerProd = 0;
 
     for (int i = 0; i < moment.size(); i++)
     {

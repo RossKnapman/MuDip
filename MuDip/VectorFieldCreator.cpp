@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 10/08/2018.
-//
-
 #include "VectorFieldCreator.h"
 #include <iostream>
 #include "Crystals/Cu2OSeO3.h"
@@ -85,5 +81,6 @@ py::array_t<double> VectorFieldCreator::outputMField()
             }
         }
     }
+    
     return outputMArray;
 }

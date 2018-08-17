@@ -1,21 +1,19 @@
-//
-// Created by Ross Knapman on 02/08/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_SAMPLE_H
 #define INC_3DDIPOLEFIELD_SAMPLE_H
 
 #include <vector>
-
 #include "CellAtom.h"
 #include "MomentField.h"
+
+
+// We do not want to instantiate this class directly, rather it acts as the base class
+// for specific crystals in the "Crystals" directory
 
 
 class Sample
 {
 
 protected:
-
     std::vector<CellAtom> atoms;
     double a;
     MomentField momentField;

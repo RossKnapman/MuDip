@@ -1,16 +1,7 @@
-//
-// Created by Ross Knapman on 30/07/2018.
-//
-
 #include "LorentzSphere.h"
-
-#include <vector>
 #include <iostream>
 #include <fstream>
 
-#include "CellAtom.h"
-#include "Dipole.h"
-#include "Constants.h"
 
 LorentzSphere::LorentzSphere(double xIn, double yIn, double zIn, Sample sampleIn, double radiusIn) : sample(sampleIn)
 {
@@ -96,8 +87,8 @@ std::vector<double> LorentzSphere::calculateLorentzField()
     // Use this to calculate the Lorentz field, B = (mu_0 / 3) * Sum of moments in Lorentz sphere / Volume of Lorentz sphere
     for (int i = 0; i < Blor.size(); i++)
     {
-        // Note that we need to convert radius units from unit cells to Angstroms, i.e. multiply by (1 / a * 10^-10)^3, where a = lattice constant
-        // We also need to convert m from Bohr magnetons to J/T
+        // Note that here we convert radius units from unit cells to Angstroms, i.e. multiply by (1 / a * 10^-10)^3, where a = lattice constant
+        // We also convert m from Bohr magnetons to J/T
         Blor[i] = (constants::mu_0 / 3) * (3 / (4 * M_PI * pow(radius, 3))) * m[i] * pow((sample.getA() * pow(10, -10)), -3) * constants::bohrMagneton;
     }
 

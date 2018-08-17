@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 25/07/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_DIPOLE_H
 #define INC_3DDIPOLEFIELD_DIPOLE_H
 
@@ -38,5 +34,6 @@ public:
     // Misc.
     std::vector<double> calculateField(double targetX, double targetY, double targetZ);
 };
+
 
 #endif //INC_3DDIPOLEFIELD_DIPOLE_H

@@ -1,15 +1,11 @@
-//
-// Created by Ross Knapman on 12/08/2018.
-//
-
 #include "SpectrumCreator.h"
-
 #include <iostream>
 #include <cmath>
 #include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>
 
 namespace py = pybind11;
+
 
 SpectrumCreator::SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
                                  int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn) :
@@ -48,27 +44,28 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
 
                     std::vector<double> nVector(3);  // The unit vector along which the component of n is taken
 
-                    // Components are random values between 0 and 1
-//                    nVector[0] = (double) 2 * rand() / RAND_MAX;
-//                    nVector[1] = (double) 2 * rand() / RAND_MAX;
-//                    nVector[2] = (double) 2 * rand() / RAND_MAX;
+                   //  // Get a random orientation in the positive octant
+                   // nVector[0] = (double) rand() / RAND_MAX;
+                   // nVector[1] = (double) rand() / RAND_MAX;
+                   // nVector[2] = (double) rand() / RAND_MAX;
 
                     // For now, we just take the component along the arbitrary (1, 1, 1) direction
                     nVector[0] = 1;
                     nVector[1] = 1;
                     nVector[2] = 1;
 
-                    double Bcomponent = 0;
+                    double Bcomponent = 0;  // The component of B to be added to the output spectrum
+
+                    // Get the magnitude of nVector
                     double magnitude = 0;
 
-                    // Get magnitude for normalisation
                     for (int nIndex = 0; nIndex < nVector.size(); nIndex++)
                     {
                         magnitude = magnitude + pow(nVector[nIndex], 2);
                     }
                     magnitude = sqrt(magnitude);
 
-                    // Divide by magnitude and take dot product (i.e. Bcomponent)
+                    // Make nVector a unit vector and take the component of the B-field along it
                     for (int nIndex = 0; nIndex < nVector.size(); nIndex++)
                     {
                         nVector[nIndex] = nVector[nIndex] / magnitude;
@@ -81,5 +78,6 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
             }
         }
     }
+    
     return Bmags;
 }

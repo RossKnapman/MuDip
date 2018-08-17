@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 12/08/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_SPECTRUMCREATOR_H
 #define INC_3DDIPOLEFIELD_SPECTRUMCREATOR_H
 
@@ -14,7 +10,6 @@ namespace py = pybind11;
 
 class SpectrumCreator
 {
-
 private:
     MomentField momentField;
     Sample sample;

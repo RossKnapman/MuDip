@@ -1,9 +1,4 @@
-//
-// Created by Ross Knapman on 30/07/2018.
-//
-
 #include "MomentField.h"
-
 #include <iostream>
 #include <cmath>
 #include <complex>
@@ -63,6 +58,9 @@ MomentField::MomentField(double propagationWavelength, std::string type)
 }
 
 
+// Constructors for any future trial states would go here
+
+
 // Getter for type
 std::string MomentField::getType()
 {
@@ -83,6 +81,8 @@ std::string MomentField::getType()
         case 4:
             return "Triple-k 'skyrmion' state";
             break;
+
+        // Etc. if more states are added
     }
 }
 
@@ -94,15 +94,8 @@ std::vector<double> MomentField::getMoment(double x, double y, double z)
 
     switch(type)
     {
-
-        case 0 :
+        case 1 :  // Ferromagnet
         {
-            std::cout << "No type set!";
-        }
-
-        case 1 :
-        {
-            // Ferromagnet
             for (int i = 0; i < 3; i++)
             {
                 returnMoment[i] = fourierComponent.mutable_at(i);
@@ -122,7 +115,7 @@ std::vector<double> MomentField::getMoment(double x, double y, double z)
             return returnMoment;
         }
 
-        case 3 :  // Single-k helical state
+        case 3 :  // Single-k state
         {
             double qz = 2 * M_PI / propagationWavelength;
 
@@ -158,7 +151,6 @@ std::vector<double> MomentField::getMoment(double x, double y, double z)
             returnMoment[1] = sin(q1DotR + M_PI) + sin(q2DotR + M_PI) + sin(q3DotR + M_PI);
             returnMoment[2] = 0;
 
-            // Normalise, and multiply by the required magnitude (0.25 mu_B in Tom's paper)
             double magnitude = 0;
             for (int i = 0; i < returnMoment.size(); i++)
             {
@@ -174,5 +166,12 @@ std::vector<double> MomentField::getMoment(double x, double y, double z)
             return returnMoment;
         }
 
+        // Expressions for future states here
+
+        default :
+        {
+            // Ideally, this should throw an exception, rather than just printing
+            py::print("No moment field type set");
+        }
     }
 }

@@ -1,7 +1,3 @@
-//
-// Created by Ross Knapman on 10/08/2018.
-//
-
 #ifndef INC_3DDIPOLEFIELD_CU2OSEO3_H
 #define INC_3DDIPOLEFIELD_CU2OSEO3_H
 
@@ -10,7 +6,6 @@
 
 class Cu2OSeO3 : public Sample
 {
-
 public:
     Cu2OSeO3(MomentField momentFieldIn);
 };
