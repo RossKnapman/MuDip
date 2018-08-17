@@ -21,26 +21,33 @@ private:
     py::array_t<double> BApplied;
     double z;
 
-
 public:
     VectorFieldCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
                        int startCellIn, int endCellIn, int resolutionIn, int radius, py::array_t<double> BAppliedIn, double zIn);
 
-    // // Setters
-    // void setMomentField(MomentField momentFieldIn) { momentField = momentFieldIn; }
-    // void setSample(Sample sampleIn) { sample = sampleIn; }
-    // void setMuonPos(py::array_t<double> muonPositionsIn) { muonPositions = muonPositionsIn; }
-    // void setStartCell(int startCellIn) { startCell = startCellIn; }
-    // void setEndCell(int endCellIn) { endCell = endCellIn; }
-    // void setResolution(int resolutionIn) { resolution = resolutionIn; }
-    // void setRadius(int radiusIn) { radius = radiusIn; }
-    // void setBApplied(py::array_t<double> BAppliedIn) { BApplied = BAppliedIn; }
-    // void setZ(double zIn) { z = zIn; }
-    // void setBPath(std::string BPathIn) { BPath = BPathIn; }
-    // void setMPath(std::string MPathIn) { MPath = MPathIn; }
+    // Setters (we use an initialiser list in the constructor, hence these would only be called by the user)
+    void setMomentField(MomentField momentFieldIn) { momentField = momentFieldIn; }
+    void setSample(Sample sampleIn) { sample = sampleIn; }
+    void setMuonPos(py::array_t<double> muonPositionsIn) { muonPositions = muonPositionsIn; }
+    void setStartCell(int startCellIn) { startCell = startCellIn; }
+    void setEndCell(int endCellIn) { endCell = endCellIn; }
+    void setResolution(int resolutionIn) { resolution = resolutionIn; }
+    void setRadius(int radiusIn) { radius = radiusIn; }
+    void setBApplied(py::array_t<double> BAppliedIn) { BApplied = BAppliedIn; }
+    void setZ(double zIn) { z = zIn; }
 
-    // Do I really need getters (or even setters, for that matter)?
+    // Getters
+    MomentField getMomentField() { return momentField; }
+    Sample getSample() { return sample; }
+    py::array_t<double> getMuonPositions() { return muonPositions; }
+    int getStartCell() { return startCell; }
+    int getEndCell() { return endCell; }
+    int getResolution() { return resolution; }
+    int getRadius() { return radius; }
+    py::array_t<double> getBApplied() { return BApplied; }
+    double getZ() { return z; }
 
+    // What the user is actually supposed to call
     py::array_t<double> outputBField();  // Output 2D magnetic field in z plane
     py::array_t<double> outputMField();  // Outut moment field in z plane
 

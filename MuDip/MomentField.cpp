@@ -83,6 +83,9 @@ std::string MomentField::getType()
             break;
 
         // Etc. if more states are added
+
+        default :
+            return "State not defined";
     }
 }
 
@@ -172,6 +175,7 @@ std::vector<double> MomentField::getMoment(double x, double y, double z)
         {
             // Ideally, this should throw an exception, rather than just printing
             py::print("No moment field type set");
+            return returnMoment;  // This would be a useless zero-array but compiler complains if I don't return this
         }
     }
 }
