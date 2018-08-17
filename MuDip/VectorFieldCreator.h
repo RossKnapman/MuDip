@@ -24,13 +24,11 @@ private:
     int radius;
     py::array_t<double> BApplied;
     double z;
-    std::string BPath;
-    std::string MPath;
 
 
 public:
     VectorFieldCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
-                       int startCellIn, int endCellIn, int resolutionIn, int radius, py::array_t<double> BAppliedIn, double zIn, std::string BPathIn, std::string MPathIn);
+                       int startCellIn, int endCellIn, int resolutionIn, int radius, py::array_t<double> BAppliedIn, double zIn);
 
     // // Setters
     // void setMomentField(MomentField momentFieldIn) { momentField = momentFieldIn; }

@@ -24,11 +24,10 @@ private:
     int resolution;
     int radius;
     py::array_t<double> BApplied;
-    std::string outputPath;
 
 public:
     SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
-                    int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, std::string outputPathIn);
+                    int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn);
 
     py::array_t<double> outputSpectrum();
 

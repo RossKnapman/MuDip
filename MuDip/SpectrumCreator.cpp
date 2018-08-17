@@ -12,11 +12,11 @@
 namespace py = pybind11;
 
 SpectrumCreator::SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
-                                 int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, std::string outputPathIn) :
+                                 int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn) :
 
 // Initialiser list
 momentField(momentFieldIn), sample(sampleIn), muonPositions(muonPositionsIn), startCell(startCellIn), endCell(endCellIn),
-resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn), outputPath(outputPathIn) {}
+resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn) {}
 
 
 py::array_t<double> SpectrumCreator::outputSpectrum()

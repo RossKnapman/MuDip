@@ -12,11 +12,11 @@ namespace py = pybind11;
 
 
 VectorFieldCreator::VectorFieldCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
-int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, double zIn, std::string BPathIn, std::string MPathIn) :
+int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, double zIn) :
 
 // Initialiser list
 momentField(momentFieldIn), sample(sampleIn), muonPositions(muonPositionsIn), startCell(startCellIn),
-endCell(endCellIn), resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn), z(zIn), BPath(BPathIn), MPath(MPathIn) {}
+endCell(endCellIn), resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn), z(zIn) {}
 
 
 py::array_t<double> VectorFieldCreator::outputBField()
