@@ -28,7 +28,6 @@ py::array_t<double> VectorFieldCreator::outputBField()
 
     for (double j = startCell; j < endCell; j = j + resolution)
     {
-        py::print("j", j);
         for (double i = startCell; i < endCell; i = i + resolution)
         {
             for (int muonIndex = 0; muonIndex < len(muonPositions); muonIndex++)
@@ -37,8 +36,6 @@ py::array_t<double> VectorFieldCreator::outputBField()
                 double xPos = i + muonPositions.mutable_at(muonIndex, 0);
                 double yPos = j + muonPositions.mutable_at(muonIndex, 1);
                 double zPos = z + muonPositions.mutable_at(muonIndex, 2);
-                py::print("x position ", xPos);
-                py::print("y position ", yPos);
                 std::vector<double> Bfield = sample.getTotalField(xPos, yPos, zPos, radius);
                 outputBArray.mutable_at(0, Bindex) = xPos;
                 outputBArray.mutable_at(1, Bindex) = yPos;

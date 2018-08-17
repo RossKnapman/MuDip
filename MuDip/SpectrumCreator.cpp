@@ -32,12 +32,13 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
         {
             for (int k = startCell; k < endCell; k = k + resolution)
             {
-                py::print(i, j, k);
                 for (int muonIndex = 0; muonIndex < len(muonPositions); muonIndex++)
                 {
+                    py::print(i, j, k);
                     double x = i + muonPositions.mutable_at(muonIndex, 0);
                     double y = j + muonPositions.mutable_at(muonIndex, 1);
                     double z = k + muonPositions.mutable_at(muonIndex, 2);
+
                     std::vector<double> B = sample.getTotalField(x, y, z, radius);
 
                     B[0] = B[0] + BApplied.mutable_at(0);  // Add applied magnetic field
