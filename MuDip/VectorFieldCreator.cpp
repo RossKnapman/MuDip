@@ -22,7 +22,7 @@ endCell(endCellIn), resolution(resolutionIn), radius(radiusIn), BApplied(BApplie
 py::array_t<double> VectorFieldCreator::outputBField()
 {
     // Initialise the output array, which looks like [[x1, x2, ...], [y1, y1, ...], [B_x1, B_x2, ...], [B_y1, B_y2, ...]]
-    int componentLength = pow(((endCell - startCell) / resolution), 3) * muonPositions.size();
+    int componentLength = pow(((endCell - startCell) / resolution), 3) * len(muonPositions);
     py::array_t<double> outputBArray({4, componentLength});
     double Bindex = 0;
 
@@ -30,17 +30,20 @@ py::array_t<double> VectorFieldCreator::outputBField()
     {
         for (double i = startCell; i < endCell; i = i + resolution)
         {
-            for (int muonIndex = 0; muonIndex < muonPositions.size(); muonIndex++)
+            for (int muonIndex = 0; muonIndex < len(muonPositions); muonIndex++)
             {
+                py::print(i, j, muonIndex);
                 double xPos = i + muonPositions.mutable_at(muonIndex, 0);
                 double yPos = j + muonPositions.mutable_at(muonIndex, 1);
                 double zPos = z + muonPositions.mutable_at(muonIndex, 2);
+                py::print("x position ", xPos);
                 std::vector<double> Bfield = sample.getTotalField(xPos, yPos, zPos, radius);
                 outputBArray.mutable_at(0, Bindex) = xPos;
                 outputBArray.mutable_at(1, Bindex) = yPos;
                 outputBArray.mutable_at(2, Bindex) = Bfield[0] + BApplied.mutable_at(0);
                 outputBArray.mutable_at(3, Bindex) = Bfield[1] + BApplied.mutable_at(1);
                 Bindex++;
+                py::print("Should be", outputBArray.mutable_at(0, 0));
             }
         }
         return outputBArray;

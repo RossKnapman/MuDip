@@ -6,7 +6,8 @@
 #include "../Sample.h"
 
 
-Cu2OSeO3::Cu2OSeO3(MomentField momentFieldIn) : Sample(a, momentFieldIn)
+// We must pass this crystal's lattice constant a = 8.925 Angstroms to the base constructor
+Cu2OSeO3::Cu2OSeO3(MomentField momentFieldIn) : Sample(8.92500, momentFieldIn)
 {
 
     setMomentField(momentFieldIn);

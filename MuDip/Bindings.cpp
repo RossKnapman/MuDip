@@ -30,5 +30,7 @@ PYBIND11_MODULE(MuDip, m)
 
     py::class_<VectorFieldCreator>(m, "VectorFieldCreator")
       .def(py::init<MomentField, Sample, py::array_t<double>,
-      int, int, int, int, py::array_t<double>, double>());
+      int, int, int, int, py::array_t<double>, double>())
+      .def("outputBField", &VectorFieldCreator::outputBField)
+      .def("outputMField", &VectorFieldCreator::outputMField);
 };

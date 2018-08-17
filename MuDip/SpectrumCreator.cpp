@@ -32,16 +32,18 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
         {
             for (int k = startCell; k < endCell; k = k + resolution)
             {
-                std::cout << i << " " << j << " " << k << std::endl;
-                for (int muonIndex = 0; muonIndex < muonPositions.size(); muonIndex++)
+                py::print(i, j, k);
+                for (int muonIndex = 0; muonIndex < len(muonPositions); muonIndex++)
                 {
                     double x = i + muonPositions.mutable_at(muonIndex, 0);
                     double y = j + muonPositions.mutable_at(muonIndex, 1);
                     double z = k + muonPositions.mutable_at(muonIndex, 2);
                     std::vector<double> B = sample.getTotalField(x, y, z, radius);
+
                     B[0] = B[0] + BApplied.mutable_at(0);  // Add applied magnetic field
                     B[1] = B[1] + BApplied.mutable_at(1);
                     B[2] = B[2] + BApplied.mutable_at(2);
+
 
                     std::vector<double> nVector(3);  // The unit vector along which the component of n is taken
 
@@ -50,6 +52,7 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
 //                    nVector[1] = (double) 2 * rand() / RAND_MAX;
 //                    nVector[2] = (double) 2 * rand() / RAND_MAX;
 
+                    // For now, we just take the component along the arbitrary (1, 1, 1) direction
                     nVector[0] = 1;
                     nVector[1] = 1;
                     nVector[2] = 1;

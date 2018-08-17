@@ -10,8 +10,6 @@
 
 class Cu2OSeO3 : public Sample
 {
-private:
-    double a = 8.92500;
 
 public:
     Cu2OSeO3(MomentField momentFieldIn);

@@ -42,6 +42,5 @@ std::vector<double> Sample::getTotalField(double x, double y, double z, double r
     {
         totalField[i] = dipoleField[i] + lorentzField[i];
     }
-
     return totalField;
 }
