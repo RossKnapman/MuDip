@@ -1,3 +1,6 @@
+# This is based on the example at https://github.com/pybind/cmake_example
+
+
 import os
 import re
 import sys
@@ -70,7 +73,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='MuDip',
-    version='0.1',
+    # version='0.1',
     author='Ross Knapman',
     author_email='rjknapman@gmail.com',
     description='Small Python module to simulate the dipole field distribution within a sample.',
