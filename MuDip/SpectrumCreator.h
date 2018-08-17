@@ -6,6 +6,7 @@
 #define INC_3DDIPOLEFIELD_SPECTRUMCREATOR_H
 
 #include "LorentzSphere.h"
+#include <pybind11/pybind11.h>
 #include<pybind11/numpy.h>
 
 namespace py = pybind11;
@@ -17,17 +18,17 @@ class SpectrumCreator
 private:
     MomentField momentField;
     Sample sample;
-    std::vector<std::vector<double> > muonPositions;
+    py::array_t<double> muonPositions;
     int startCell;
     int endCell;
     int resolution;
     int radius;
-    std::vector<double> BApplied;
+    py::array_t<double> BApplied;
     std::string outputPath;
 
 public:
-    SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, std::vector<std::vector<double> > muonPositionsIn,
-                    int startCellIn, int endCellIn, int resolutionIn, int radiusIn, std::vector<double> BAppliedIn, std::string outputPathIn);
+    SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
+                    int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, std::string outputPathIn);
 
     py::array_t<double> outputSpectrum();
 

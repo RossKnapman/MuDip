@@ -32,7 +32,7 @@ MomentField::MomentField(py::array_t<double> propagationVector, double propagati
     double magnitude = 0;
     for (int i = 0; i < propagationVector.size(); i++)
     {
-        magnitude = magnitude + pow(propagationVector[i], 2);
+        magnitude = magnitude + pow(propagationVector.mutable_at(i), 2);
     }
 
     magnitude = sqrt(magnitude);

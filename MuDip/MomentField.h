@@ -24,8 +24,8 @@ private:
 public:
 
     // Constructors for various structures
-    MomentField(py::array_t fourierComponent);  // For ferromagnetic
-    MomentField(py::array_t propagationVector, double propagationWavelength, py::array_t fourierComponent);  // For antiferromagnetic
+    MomentField(py::array_t<double> fourierComponent);  // For ferromagnetic
+    MomentField(py::array_t<double> propagationVector, double propagationWavelength, py::array_t<double> fourierComponent);  // For antiferromagnetic
     MomentField(double propagationWavelength, std::string type);  // For single-k(type = "singleK") or triple-k states (type = "tripleK")
 
     // Setters

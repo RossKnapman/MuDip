@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
-    <generated />
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="MuDip" targetName="MuDip" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -10,7 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="173ce8a7-dc9a-4d7a-8bd1-1a487b4922e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MuDip/DipoleField.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MuDip/DipoleField.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/Bindings.cpp" afterPath="$PROJECT_DIR$/MuDip/Bindings.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/MomentField.cpp" afterPath="$PROJECT_DIR$/MuDip/MomentField.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/MomentField.h" afterPath="$PROJECT_DIR$/MuDip/MomentField.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/SpectrumCreator.cpp" afterPath="$PROJECT_DIR$/MuDip/SpectrumCreator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/SpectrumCreator.h" afterPath="$PROJECT_DIR$/MuDip/SpectrumCreator.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/VectorFieldCreator.cpp" afterPath="$PROJECT_DIR$/MuDip/VectorFieldCreator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MuDip/VectorFieldCreator.h" afterPath="$PROJECT_DIR$/MuDip/VectorFieldCreator.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +39,8 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,16 +60,6 @@
         <entry file="file://$PROJECT_DIR$/MuDip/Dipole.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-657">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DipoleField.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MuDip/DipoleField.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -105,7 +109,7 @@
       <file leaf-file-name="VectorFieldCreator.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MuDip/VectorFieldCreator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-215">
+            <state relative-caret-position="-655">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -193,6 +197,18 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.MuDip">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="MuDip" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MuDip" TARGET_NAME="MuDip" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MuDip" />
+    </list>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -263,8 +279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -327,7 +343,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MuDip/VectorFieldCreator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-215">
+        <state relative-caret-position="-655">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

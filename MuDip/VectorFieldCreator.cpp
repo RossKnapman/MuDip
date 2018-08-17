@@ -5,20 +5,25 @@
 #include "VectorFieldCreator.h"
 #include <iostream>
 #include "Crystals/Cu2OSeO3.h"
+#include <pybind11/numpy.h>
+#include <pybind11/pybind11.h>
+
+namespace py = pybind11;
 
 
-VectorFieldCreator::VectorFieldCreator(MomentField momentFieldIn, Sample sampleIn, std::vector<std::vector<double> > muonPositionsIn,
-int startCellIn, int endCellIn, int resolutionIn, int radiusIn, std::vector<double> BAppliedIn, double zIn, std::string BPathIn, std::string MPathIn) :
+VectorFieldCreator::VectorFieldCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
+int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, double zIn, std::string BPathIn, std::string MPathIn) :
 
 // Initialiser list
 momentField(momentFieldIn), sample(sampleIn), muonPositions(muonPositionsIn), startCell(startCellIn),
 endCell(endCellIn), resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn), z(zIn), BPath(BPathIn), MPath(MPathIn) {}
 
 
-py::array_t<py::array_t<double> > VectorFieldCreator::outputBField()
+py::array_t<double> VectorFieldCreator::outputBField()
 {
     // Initialise the output array, which looks like [[x1, x2, ...], [y1, y1, ...], [B_x1, B_x2, ...], [B_y1, B_y2, ...]]
-    py::array_t<py::array_t<double> > outputBArray(4, py::array_t<double>(pow(((endCell - startCell) / resolution), 3) * muonPositions.size()));
+    int componentLength = pow(((endCell - startCell) / resolution), 3) * muonPositions.size();
+    py::array_t<double> outputBArray({4, componentLength});
     double Bindex = 0;
 
     for (double j = startCell; j < endCell; j = j + resolution)
@@ -27,14 +32,14 @@ py::array_t<py::array_t<double> > VectorFieldCreator::outputBField()
         {
             for (int muonIndex = 0; muonIndex < muonPositions.size(); muonIndex++)
             {
-                double xPos = i + muonPositions[muonIndex][0];
-                double yPos = j + muonPositions[muonIndex][1];
-                double zPos = z + muonPositions[muonIndex][2];
+                double xPos = i + muonPositions.mutable_at(muonIndex, 0);
+                double yPos = j + muonPositions.mutable_at(muonIndex, 1);
+                double zPos = z + muonPositions.mutable_at(muonIndex, 2);
                 std::vector<double> Bfield = sample.getTotalField(xPos, yPos, zPos, radius);
-                outputBArray.mutable_at(0).mutable_at(Bindex) = xPos;
-                outputBArray.mutable_at(1).mutable_at(Bindex) = yPos;
-                outputBArray.mutable_at(2).mutable_at(Bindex) = Bfield[0] + Bapplied[0];
-                outputBArray.mutable_at(3).mutable_at(Bindex) = Bfield[1] + Bapplied[1];
+                outputBArray.mutable_at(0, Bindex) = xPos;
+                outputBArray.mutable_at(1, Bindex) = yPos;
+                outputBArray.mutable_at(2, Bindex) = Bfield[0] + BApplied.mutable_at(0);
+                outputBArray.mutable_at(3, Bindex) = Bfield[1] + BApplied.mutable_at(1);
                 Bindex++;
             }
         }
@@ -43,10 +48,11 @@ py::array_t<py::array_t<double> > VectorFieldCreator::outputBField()
 }
 
 
-py::array_t<py::array_t<double> > VectorFieldCreator::outputMField()
+py::array_t<double> VectorFieldCreator::outputMField()
 {
     // Initialise the output array, which looks like [[x1, x2, ...], [y1, y1, ...], [m_x1, m_x2, ...], [m_y1, m_y2, ...]]
-    py::array_t<py::array_t<double> > outputMArray(4, py::array_t<double>(pow(((endCell - startCell) / resolution), 3) * muonPositions.size()));
+    int componentLength = pow(((endCell - startCell) / resolution), 3) * sample.getAtoms().size();
+    py::array_t<double> outputMArray({4, componentLength});
     double Mindex = 0;
 
     for (double j = startCell; j < endCell; j = j + resolution)
@@ -70,10 +76,10 @@ py::array_t<py::array_t<double> > VectorFieldCreator::outputMField()
                         momentVec[cartesianIndex] = -momentVec[cartesianIndex];
                     }
                 }
-                outputMArray.mutable_at(0).mutable_at(Mindex) = atomXPos;
-                outputMArray.mutable_at(1).mutable_at(Mindex) = atomYPos;
-                outputMArray.mutable_at(2).mutable_at(Mindex) = momentVec[0];
-                outputMArray.mutable_at(3).mutable_at(Mindex) = momentVec[1];
+                outputMArray.mutable_at(0, Mindex) = atomXPos;
+                outputMArray.mutable_at(1, Mindex) = atomYPos;
+                outputMArray.mutable_at(2, Mindex) = momentVec[0];
+                outputMArray.mutable_at(3, Mindex) = momentVec[1];
                 Mindex++;
             }
         }

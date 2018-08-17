@@ -6,9 +6,13 @@
 
 #include <iostream>
 #include <cmath>
+#include <pybind11/pybind11.h>
+#include <pybind11/numpy.h>
 
-SpectrumCreator::SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, std::vector<std::vector<double> > muonPositionsIn,
-                                 int startCellIn, int endCellIn, int resolutionIn, int radiusIn, std::vector<double> BAppliedIn, std::string outputPathIn) :
+namespace py = pybind11;
+
+SpectrumCreator::SpectrumCreator(MomentField momentFieldIn, Sample sampleIn, py::array_t<double> muonPositionsIn,
+                                 int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t<double> BAppliedIn, std::string outputPathIn) :
 
 // Initialiser list
 momentField(momentFieldIn), sample(sampleIn), muonPositions(muonPositionsIn), startCell(startCellIn), endCell(endCellIn),
@@ -17,10 +21,9 @@ resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn), outputPath(out
 
 py::array_t<double> SpectrumCreator::outputSpectrum()
 {
-    // std::vector<double> Bmags;
-
-    py::array_t<double> Bmags(pow(((endCell - startCell) / resolution), 3) * muonPositions.size())
-    Bindex = 0;
+    int componentLength = pow(((endCell - startCell) / resolution), 3) * muonPositions.size();
+    py::array_t<double> Bmags(componentLength);
+    int Bindex = 0;
 
 #pragma omp parallel for collapse(3)  // Parallelise the for loop
     for (int i = startCell; i < endCell; i = i + resolution)
@@ -32,13 +35,13 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
                 std::cout << i << " " << j << " " << k << std::endl;
                 for (int muonIndex = 0; muonIndex < muonPositions.size(); muonIndex++)
                 {
-                    double x = i + muonPositions[muonIndex][0];
-                    double y = j + muonPositions[muonIndex][1];
-                    double z = k + muonPositions[muonIndex][2];
+                    double x = i + muonPositions.mutable_at(muonIndex, 0);
+                    double y = j + muonPositions.mutable_at(muonIndex, 1);
+                    double z = k + muonPositions.mutable_at(muonIndex, 2);
                     std::vector<double> B = sample.getTotalField(x, y, z, radius);
-                    B[0] = B[0] + BApplied[0];  // Add applied magnetic field
-                    B[1] = B[1] + BApplied[1];
-                    B[2] = B[2] + BApplied[2];
+                    B[0] = B[0] + BApplied.mutable_at(0);  // Add applied magnetic field
+                    B[1] = B[1] + BApplied.mutable_at(1);
+                    B[2] = B[2] + BApplied.mutable_at(2);
 
                     std::vector<double> nVector(3);  // The unit vector along which the component of n is taken
 

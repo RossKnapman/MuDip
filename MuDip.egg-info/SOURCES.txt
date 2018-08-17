@@ -1,0 +1,6 @@
+setup.py
+MuDip.egg-info/PKG-INFO
+MuDip.egg-info/SOURCES.txt
+MuDip.egg-info/dependency_links.txt
+MuDip.egg-info/not-zip-safe
+MuDip.egg-info/top_level.txt
