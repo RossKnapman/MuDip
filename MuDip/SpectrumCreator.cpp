@@ -21,7 +21,7 @@ resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn) {}
 
 py::array_t<double> SpectrumCreator::outputSpectrum()
 {
-    int componentLength = pow(((endCell - startCell) / resolution), 3) * muonPositions.size();
+    int componentLength = pow(((endCell - startCell) / resolution), 3) * len(muonPositions);
     py::array_t<double> Bmags(componentLength);
     int Bindex = 0;
 
