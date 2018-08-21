@@ -14,6 +14,14 @@ Dipole::Dipole(double xIn, double yIn, double zIn, std::vector<double> momentIn,
     setLatticeConstant(latticeConstantIn);
 }
 
+
+/**
+*   Calculate the field due to a single dipole at an arbitrary point.
+*   @param x The x-position of the point at which we wish to evaluate the dipole field.
+*   @param y The y-position of the point at which we wish to evaluate the dipole field.
+*   @param z The z-position of the point at which we wish to evaluate the dipole field.
+*   @return The dipole magnetic field as a vector.
+*/
 std::vector<double> Dipole::calculateField(double targetX, double targetY, double targetZ)
 {
 

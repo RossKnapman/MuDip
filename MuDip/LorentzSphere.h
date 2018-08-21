@@ -1,6 +1,10 @@
-//
-// Created by Ross Knapman on 30/07/2018.
-//
+/**
+*   @file LorentzSphere.h
+*   @brief Evaluates the dipole and Lorentz fields for an arbitrary point.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
 
 #ifndef INC_3DDIPOLEFIELD_LORENTZSPHERE_H
 #define INC_3DDIPOLEFIELD_LORENTZSPHERE_H

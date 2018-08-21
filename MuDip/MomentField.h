@@ -1,3 +1,11 @@
+/**
+*   @file MomentField.h
+*   @brief Stores information about the trial moment field pattern.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_MOMENTFIELD_H
 #define INC_3DDIPOLEFIELD_MOMENTFIELD_H
 

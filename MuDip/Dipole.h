@@ -1,3 +1,12 @@
+/**
+*   @file Dipole.h
+*   @brief Stores information about individual dipole, and allows the evaluation
+*   of its resulting field at an arbitrary point.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_DIPOLE_H
 #define INC_3DDIPOLEFIELD_DIPOLE_H
 

@@ -15,6 +15,11 @@ momentField(momentFieldIn), sample(sampleIn), muonPositions(muonPositionsIn), st
 resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn) {}
 
 
+/**
+*   Obtain a 1d array of magnetic field components sampled throughout the crystal,
+*   which can be used to generate a spectrum.
+*   @return 1d array of magnetic field components sampled through the crystal.
+*/
 py::array_t<double> SpectrumCreator::outputSpectrum()
 {
     int componentLength = pow(((endCell - startCell) / resolution), 3) * len(muonPositions);
@@ -78,6 +83,6 @@ py::array_t<double> SpectrumCreator::outputSpectrum()
             }
         }
     }
-    
+
     return Bmags;
 }

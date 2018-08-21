@@ -1,3 +1,13 @@
+/**
+*   @file CellAtom.h
+*   @brief Stores the information about the individual atom in a unit cell, i.e.
+*   position in fractional coordinates and whether or not the moment if flipped
+*   with respect to the moment field pattern.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_CELLATOM_H
 #define INC_3DDIPOLEFIELD_CELLATOM_H
 

@@ -6,7 +6,8 @@
 
 
 // The ferromagnetic state constructor (only takes in the Fourier component)
-MomentField::MomentField(py::array_t<double> fourierComponent){
+MomentField::MomentField(py::array_t<double> fourierComponent)
+{
     setFourierComponent(fourierComponent);
     setType(1);
 }
@@ -90,6 +91,12 @@ std::string MomentField::getType()
 }
 
 
+/**
+*   Get the magnetic moment for an atom placed at an arbitrary point.
+*   @param x The x-position of the point to obtain the moment
+*   @param y The y-position of the point to obtain the moment
+*   @param z The z-position of the point to obtain the moment
+*/
 std::vector<double> MomentField::getMoment(double x, double y, double z)
 {
 

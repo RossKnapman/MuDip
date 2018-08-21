@@ -1,3 +1,12 @@
+/**
+*   @file SpectrumCreator.h
+*   @brief Object which contains the functions to output a list of the magnetic
+*   field components sampled around the crystal to create a spectrum.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_SPECTRUMCREATOR_H
 #define INC_3DDIPOLEFIELD_SPECTRUMCREATOR_H
 

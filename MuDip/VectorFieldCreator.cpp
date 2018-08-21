@@ -15,6 +15,13 @@ momentField(momentFieldIn), sample(sampleIn), muonPositions(muonPositionsIn), st
 endCell(endCellIn), resolution(resolutionIn), radius(radiusIn), BApplied(BAppliedIn), z(zIn) {}
 
 
+/**
+*   Outputs the information required to plot a 2D slice of the magnetic field
+*   within the sample.
+*   @return A 2d array of the form [[x1, x2, ...], [y1, y1, ...], [B_x1, B_x2, ...], [B_y1, B_y2, ...]]
+*   where xi and yi are the x and y positions respectively, and Bxi and Byi are the x- and y-components
+*   of the magnetic fields at these points.
+*/
 py::array_t<double> VectorFieldCreator::outputBField()
 {
     // Initialise the output array, which looks like [[x1, x2, ...], [y1, y1, ...], [B_x1, B_x2, ...], [B_y1, B_y2, ...]]
@@ -81,6 +88,6 @@ py::array_t<double> VectorFieldCreator::outputMField()
             }
         }
     }
-    
+
     return outputMArray;
 }

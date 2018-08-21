@@ -1,3 +1,12 @@
+/**
+*   @file VectorFieldCreator.h
+*   @brief Contains the functions to output the necessary information to plot
+*   a 2D slice of the magnetic and moment fields within the crystal.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_VECTORFIELDCREATOR_H
 #define INC_3DDIPOLEFIELD_VECTORFIELDCREATOR_H
 

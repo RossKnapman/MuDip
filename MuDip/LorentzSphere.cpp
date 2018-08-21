@@ -50,6 +50,12 @@ LorentzSphere::LorentzSphere(double xIn, double yIn, double zIn, Sample sampleIn
     }
 }
 
+
+/**
+*   Evaluate the dipole field by summing up the contributions from the individual
+*   dipoles within the Lorentz sphere.
+*   @return The dipole field as a vector.
+*/
 std::vector<double> LorentzSphere::calculateDipoleField()
 {
     std::vector<double> Bdip(3);
@@ -67,6 +73,10 @@ std::vector<double> LorentzSphere::calculateDipoleField()
 }
 
 
+/**
+*   Evaluate the Lorentz field for the Lorentz sphere.
+*   @return The Lorentz field as a vector.
+*/
 std::vector<double> LorentzSphere::calculateLorentzField()
 {
     std::vector<double> Blor(3);

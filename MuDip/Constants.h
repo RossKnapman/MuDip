@@ -1,3 +1,11 @@
+/**
+*   @file Constants.h
+*   @brief Stores the constants needed for computation.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_CONSTANTS_H
 #define INC_3DDIPOLEFIELD_CONSTANTS_H
 

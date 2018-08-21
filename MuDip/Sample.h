@@ -1,3 +1,12 @@
+/**
+*   @file Sample.h
+*   @brief Acts as a "binder" to store information about the moment field and
+*   the unit cell in a single object.
+*   @author Ross Knapman
+*   @date 21/08/2018
+*/
+
+
 #ifndef INC_3DDIPOLEFIELD_SAMPLE_H
 #define INC_3DDIPOLEFIELD_SAMPLE_H
 
