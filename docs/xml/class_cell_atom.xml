@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_cell_atom" kind="class" language="C++" prot="public">
+    <compoundname>CellAtom</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_atom_1a02e89f199611e851bbe72c6c5a8cebab" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CellAtom::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="20" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_atom_1a9b727cd623243a0721285c847ee6e4f5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CellAtom::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="21" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_atom_1a984c886117a323ab1ea04cfcb5993b27" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CellAtom::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="22" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_atom_1a7b676702b4acecdd01532faac4c0cf3f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAtom::flipped</definition>
+        <argsstring></argsstring>
+        <name>flipped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="23" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_atom_1a3e781f2e0f62944cdcdd8e047afe0118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CellAtom::CellAtom</definition>
+        <argsstring>(double x, double y, double z, bool flipped=false)</argsstring>
+        <name>CellAtom</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>flipped</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="26" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.cpp" bodystart="4" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1aa6d9dd7ae86a7104c6b82b171a99930c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAtom::setX</definition>
+        <argsstring>(double xIn)</argsstring>
+        <name>setX</name>
+        <param>
+          <type>double</type>
+          <declname>xIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="29" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1acd7ac967be7723f34fcb564dc1e4c60d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAtom::setY</definition>
+        <argsstring>(double yIn)</argsstring>
+        <name>setY</name>
+        <param>
+          <type>double</type>
+          <declname>yIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="30" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1a4e9f7f10547baff38df74f9b0ebb663b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAtom::setZ</definition>
+        <argsstring>(double zIn)</argsstring>
+        <name>setZ</name>
+        <param>
+          <type>double</type>
+          <declname>zIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="31" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1a7e3d81b8055bb920ad6ac4d48db287bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAtom::setFlipped</definition>
+        <argsstring>(bool flippedIn)</argsstring>
+        <name>setFlipped</name>
+        <param>
+          <type>bool</type>
+          <declname>flippedIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="32" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1a72e97bd46d56247d0c2fb8e2340abb9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double CellAtom::getX</definition>
+        <argsstring>()</argsstring>
+        <name>getX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="35" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1afb715abac28cc423032585acd416cf7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double CellAtom::getY</definition>
+        <argsstring>()</argsstring>
+        <name>getY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="36" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1ac280e8335425cd22172000fc4ad10104" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double CellAtom::getZ</definition>
+        <argsstring>()</argsstring>
+        <name>getZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="37" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_atom_1a112321767ed50a1f3ea084d55f8afa0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAtom::getFlipped</definition>
+        <argsstring>()</argsstring>
+        <name>getFlipped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="38" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" line="18" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/CellAtom.h" bodystart="17" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_cell_atom_1a3e781f2e0f62944cdcdd8e047afe0118" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>CellAtom</name></member>
+      <member refid="class_cell_atom_1a7b676702b4acecdd01532faac4c0cf3f" prot="private" virt="non-virtual"><scope>CellAtom</scope><name>flipped</name></member>
+      <member refid="class_cell_atom_1a112321767ed50a1f3ea084d55f8afa0e" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>getFlipped</name></member>
+      <member refid="class_cell_atom_1a72e97bd46d56247d0c2fb8e2340abb9b" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>getX</name></member>
+      <member refid="class_cell_atom_1afb715abac28cc423032585acd416cf7d" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>getY</name></member>
+      <member refid="class_cell_atom_1ac280e8335425cd22172000fc4ad10104" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>getZ</name></member>
+      <member refid="class_cell_atom_1a7e3d81b8055bb920ad6ac4d48db287bc" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>setFlipped</name></member>
+      <member refid="class_cell_atom_1aa6d9dd7ae86a7104c6b82b171a99930c" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>setX</name></member>
+      <member refid="class_cell_atom_1acd7ac967be7723f34fcb564dc1e4c60d" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>setY</name></member>
+      <member refid="class_cell_atom_1a4e9f7f10547baff38df74f9b0ebb663b" prot="public" virt="non-virtual"><scope>CellAtom</scope><name>setZ</name></member>
+      <member refid="class_cell_atom_1a02e89f199611e851bbe72c6c5a8cebab" prot="private" virt="non-virtual"><scope>CellAtom</scope><name>x</name></member>
+      <member refid="class_cell_atom_1a9b727cd623243a0721285c847ee6e4f5" prot="private" virt="non-virtual"><scope>CellAtom</scope><name>y</name></member>
+      <member refid="class_cell_atom_1a984c886117a323ab1ea04cfcb5993b27" prot="private" virt="non-virtual"><scope>CellAtom</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_vector_field_creator" kind="class" language="C++" prot="public">
+    <compoundname>VectorFieldCreator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vector_field_creator_1a9b3317775a8fa8854a24881dbe772071" prot="private" static="no" mutable="no">
+        <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+        <definition>MomentField VectorFieldCreator::momentField</definition>
+        <argsstring></argsstring>
+        <name>momentField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="23" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a16f63a7df521e720f33a2ee8b948760b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+        <definition>Sample VectorFieldCreator::sample</definition>
+        <argsstring></argsstring>
+        <name>sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="24" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a408bf30c838edca70bf06eab925e8454" prot="private" static="no" mutable="no">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; VectorFieldCreator::muonPositions</definition>
+        <argsstring></argsstring>
+        <name>muonPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="25" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a00eb9c14b753edbf5fbaf41ffe5355e0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VectorFieldCreator::startCell</definition>
+        <argsstring></argsstring>
+        <name>startCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="26" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a225888e2d9eba7d1280b8e6024684a9e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VectorFieldCreator::endCell</definition>
+        <argsstring></argsstring>
+        <name>endCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="27" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a32d0b7e6fe5b82fa86b80250943e8ffd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VectorFieldCreator::resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="28" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1aa2ab493c19120f4fbc1aa1412c6b1dd6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VectorFieldCreator::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="29" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a52988e5cf87c2a25be3b6d1eca9ce74c" prot="private" static="no" mutable="no">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; VectorFieldCreator::BApplied</definition>
+        <argsstring></argsstring>
+        <name>BApplied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="30" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vector_field_creator_1a7511d2aac8f8f66bde96fb305020c1d6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double VectorFieldCreator::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="31" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vector_field_creator_1a147179c9060856991616dd37107cdf0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VectorFieldCreator::VectorFieldCreator</definition>
+        <argsstring>(MomentField momentFieldIn, Sample sampleIn, py::array_t&lt; double &gt; muonPositionsIn, int startCellIn, int endCellIn, int resolutionIn, int radius, py::array_t&lt; double &gt; BAppliedIn, double zIn)</argsstring>
+        <name>VectorFieldCreator</name>
+        <param>
+          <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+          <declname>momentFieldIn</declname>
+        </param>
+        <param>
+          <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+          <declname>sampleIn</declname>
+        </param>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>muonPositionsIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startCellIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>endCellIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resolutionIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>BAppliedIn</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="34" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.cpp" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1ac534879bf5e588460b5480895ab752ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setMomentField</definition>
+        <argsstring>(MomentField momentFieldIn)</argsstring>
+        <name>setMomentField</name>
+        <param>
+          <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+          <declname>momentFieldIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="38" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a11a1af17f808eed250d7f5cb7cfc4d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setSample</definition>
+        <argsstring>(Sample sampleIn)</argsstring>
+        <name>setSample</name>
+        <param>
+          <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+          <declname>sampleIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="39" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a72c933a46ba13f6ab67598390a2f9c02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setMuonPos</definition>
+        <argsstring>(py::array_t&lt; double &gt; muonPositionsIn)</argsstring>
+        <name>setMuonPos</name>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>muonPositionsIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="40" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1abf474ce6e7f502eb064a245dc6dbddd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setStartCell</definition>
+        <argsstring>(int startCellIn)</argsstring>
+        <name>setStartCell</name>
+        <param>
+          <type>int</type>
+          <declname>startCellIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="41" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a2cb02ad4dcea91062d0dcedbeec4df45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setEndCell</definition>
+        <argsstring>(int endCellIn)</argsstring>
+        <name>setEndCell</name>
+        <param>
+          <type>int</type>
+          <declname>endCellIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="42" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a7c7869f19269142d3c0f55825bc4705a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setResolution</definition>
+        <argsstring>(int resolutionIn)</argsstring>
+        <name>setResolution</name>
+        <param>
+          <type>int</type>
+          <declname>resolutionIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="43" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a69f56a5513463260644b495ee031c942" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setRadius</definition>
+        <argsstring>(int radiusIn)</argsstring>
+        <name>setRadius</name>
+        <param>
+          <type>int</type>
+          <declname>radiusIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="44" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a5be4c7c6864ff1fcfedfc6015f262612" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setBApplied</definition>
+        <argsstring>(py::array_t&lt; double &gt; BAppliedIn)</argsstring>
+        <name>setBApplied</name>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>BAppliedIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="45" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a348e21dda6051f9690d4c433d2ce34b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VectorFieldCreator::setZ</definition>
+        <argsstring>(double zIn)</argsstring>
+        <name>setZ</name>
+        <param>
+          <type>double</type>
+          <declname>zIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="46" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1aea762facca48f01bf0dd37919d5de2da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+        <definition>MomentField VectorFieldCreator::getMomentField</definition>
+        <argsstring>()</argsstring>
+        <name>getMomentField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="49" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a7fc2f451b4d17c95d5b4908fdcb8d4e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+        <definition>Sample VectorFieldCreator::getSample</definition>
+        <argsstring>()</argsstring>
+        <name>getSample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="50" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a99ee9e6c0eb7944b8874ede4bddf3bcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; VectorFieldCreator::getMuonPositions</definition>
+        <argsstring>()</argsstring>
+        <name>getMuonPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="51" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1ac97a99e13b79a64367bc1093f5506271" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int VectorFieldCreator::getStartCell</definition>
+        <argsstring>()</argsstring>
+        <name>getStartCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="52" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a925c9dfa8a29762d50b32075755a0979" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int VectorFieldCreator::getEndCell</definition>
+        <argsstring>()</argsstring>
+        <name>getEndCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="53" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a5e334812abcf356bfbfb9dcce522a96f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int VectorFieldCreator::getResolution</definition>
+        <argsstring>()</argsstring>
+        <name>getResolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="54" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a676bbd0635e62ed7b196420e84b99de5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int VectorFieldCreator::getRadius</definition>
+        <argsstring>()</argsstring>
+        <name>getRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="55" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a2ebb8dda70ea728bb7f85565f1bb592d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; VectorFieldCreator::getBApplied</definition>
+        <argsstring>()</argsstring>
+        <name>getBApplied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="56" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1aa50996f6517ccfaf82cb305afa61c63d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double VectorFieldCreator::getZ</definition>
+        <argsstring>()</argsstring>
+        <name>getZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="57" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a160b37371b6853430e4d563920eca2e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt; double &gt; VectorFieldCreator::outputBField</definition>
+        <argsstring>()</argsstring>
+        <name>outputBField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outputs the information required to plot a 2D slice of the magnetic field within the sample. <simplesect kind="return"><para>A 2d array of the form [[x1, x2, ...], [y1, y1, ...], [B_x1, B_x2, ...], [B_y1, B_y2, ...]] where xi and yi are the x and y positions respectively, and Bxi and Byi are the x- and y-components of the magnetic fields at these points. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="60" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.cpp" bodystart="25" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vector_field_creator_1a15087c020366e469d259caa32118cdee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt; double &gt; VectorFieldCreator::outputMField</definition>
+        <argsstring>()</argsstring>
+        <name>outputMField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="61" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.cpp" bodystart="55" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" line="21" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/VectorFieldCreator.h" bodystart="20" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_vector_field_creator_1a52988e5cf87c2a25be3b6d1eca9ce74c" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>BApplied</name></member>
+      <member refid="class_vector_field_creator_1a225888e2d9eba7d1280b8e6024684a9e" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>endCell</name></member>
+      <member refid="class_vector_field_creator_1a2ebb8dda70ea728bb7f85565f1bb592d" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getBApplied</name></member>
+      <member refid="class_vector_field_creator_1a925c9dfa8a29762d50b32075755a0979" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getEndCell</name></member>
+      <member refid="class_vector_field_creator_1aea762facca48f01bf0dd37919d5de2da" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getMomentField</name></member>
+      <member refid="class_vector_field_creator_1a99ee9e6c0eb7944b8874ede4bddf3bcf" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getMuonPositions</name></member>
+      <member refid="class_vector_field_creator_1a676bbd0635e62ed7b196420e84b99de5" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getRadius</name></member>
+      <member refid="class_vector_field_creator_1a5e334812abcf356bfbfb9dcce522a96f" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getResolution</name></member>
+      <member refid="class_vector_field_creator_1a7fc2f451b4d17c95d5b4908fdcb8d4e1" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getSample</name></member>
+      <member refid="class_vector_field_creator_1ac97a99e13b79a64367bc1093f5506271" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getStartCell</name></member>
+      <member refid="class_vector_field_creator_1aa50996f6517ccfaf82cb305afa61c63d" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>getZ</name></member>
+      <member refid="class_vector_field_creator_1a9b3317775a8fa8854a24881dbe772071" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>momentField</name></member>
+      <member refid="class_vector_field_creator_1a408bf30c838edca70bf06eab925e8454" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>muonPositions</name></member>
+      <member refid="class_vector_field_creator_1a160b37371b6853430e4d563920eca2e0" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>outputBField</name></member>
+      <member refid="class_vector_field_creator_1a15087c020366e469d259caa32118cdee" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>outputMField</name></member>
+      <member refid="class_vector_field_creator_1aa2ab493c19120f4fbc1aa1412c6b1dd6" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>radius</name></member>
+      <member refid="class_vector_field_creator_1a32d0b7e6fe5b82fa86b80250943e8ffd" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>resolution</name></member>
+      <member refid="class_vector_field_creator_1a16f63a7df521e720f33a2ee8b948760b" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>sample</name></member>
+      <member refid="class_vector_field_creator_1a5be4c7c6864ff1fcfedfc6015f262612" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setBApplied</name></member>
+      <member refid="class_vector_field_creator_1a2cb02ad4dcea91062d0dcedbeec4df45" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setEndCell</name></member>
+      <member refid="class_vector_field_creator_1ac534879bf5e588460b5480895ab752ad" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setMomentField</name></member>
+      <member refid="class_vector_field_creator_1a72c933a46ba13f6ab67598390a2f9c02" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setMuonPos</name></member>
+      <member refid="class_vector_field_creator_1a69f56a5513463260644b495ee031c942" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setRadius</name></member>
+      <member refid="class_vector_field_creator_1a7c7869f19269142d3c0f55825bc4705a" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setResolution</name></member>
+      <member refid="class_vector_field_creator_1a11a1af17f808eed250d7f5cb7cfc4d17" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setSample</name></member>
+      <member refid="class_vector_field_creator_1abf474ce6e7f502eb064a245dc6dbddd5" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setStartCell</name></member>
+      <member refid="class_vector_field_creator_1a348e21dda6051f9690d4c433d2ce34b1" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>setZ</name></member>
+      <member refid="class_vector_field_creator_1a00eb9c14b753edbf5fbaf41ffe5355e0" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>startCell</name></member>
+      <member refid="class_vector_field_creator_1a147179c9060856991616dd37107cdf0a" prot="public" virt="non-virtual"><scope>VectorFieldCreator</scope><name>VectorFieldCreator</name></member>
+      <member refid="class_vector_field_creator_1a7511d2aac8f8f66bde96fb305020c1d6" prot="private" virt="non-virtual"><scope>VectorFieldCreator</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

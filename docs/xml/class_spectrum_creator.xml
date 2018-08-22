@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_spectrum_creator" kind="class" language="C++" prot="public">
+    <compoundname>SpectrumCreator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spectrum_creator_1ab73b358dc19570292e2cc93bf6f63f13" prot="private" static="no" mutable="no">
+        <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+        <definition>MomentField SpectrumCreator::momentField</definition>
+        <argsstring></argsstring>
+        <name>momentField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="23" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1a02848fe8e13b13c67ee1df233af1d614" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+        <definition>Sample SpectrumCreator::sample</definition>
+        <argsstring></argsstring>
+        <name>sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="24" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1a4641fc0cfb557203801958a73f22747d" prot="private" static="no" mutable="no">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; SpectrumCreator::muonPositions</definition>
+        <argsstring></argsstring>
+        <name>muonPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="25" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1afe3a3c2d31a2ee83e4d3b60199ebe097" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpectrumCreator::startCell</definition>
+        <argsstring></argsstring>
+        <name>startCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="26" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1a207d06591b7e506e3d1fd3b7a1a6bdc5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpectrumCreator::endCell</definition>
+        <argsstring></argsstring>
+        <name>endCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="27" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1a7f2bce9a62b1ecfe8e97d917560a860f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpectrumCreator::resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="28" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1ae65c9aeef62e02171f4564c9f3197945" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpectrumCreator::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="29" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spectrum_creator_1afe0f1b018c2d551d593b379b1e71cded" prot="private" static="no" mutable="no">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; SpectrumCreator::BApplied</definition>
+        <argsstring></argsstring>
+        <name>BApplied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="30" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spectrum_creator_1af6ed12941c627652ba02a012b1464f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpectrumCreator::SpectrumCreator</definition>
+        <argsstring>(MomentField momentFieldIn, Sample sampleIn, py::array_t&lt; double &gt; muonPositionsIn, int startCellIn, int endCellIn, int resolutionIn, int radiusIn, py::array_t&lt; double &gt; BAppliedIn)</argsstring>
+        <name>SpectrumCreator</name>
+        <param>
+          <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+          <declname>momentFieldIn</declname>
+        </param>
+        <param>
+          <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+          <declname>sampleIn</declname>
+        </param>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>muonPositionsIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startCellIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>endCellIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resolutionIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radiusIn</declname>
+        </param>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>BAppliedIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="33" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.cpp" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a2517445e4cac9908786385ef90bf2cc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setMomentField</definition>
+        <argsstring>(MomentField momentFieldIn)</argsstring>
+        <name>setMomentField</name>
+        <param>
+          <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+          <declname>momentFieldIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="37" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a2093c87971d428bd4193de06546f4a44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setSample</definition>
+        <argsstring>(Sample sampleIn)</argsstring>
+        <name>setSample</name>
+        <param>
+          <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+          <declname>sampleIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="38" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a21c6f6365995673c8eb8248a9752a7c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setMuonPositions</definition>
+        <argsstring>(py::array_t&lt; double &gt; muonPositionsIn)</argsstring>
+        <name>setMuonPositions</name>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>muonPositionsIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="39" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1aaf0c2136aec63f2fdd8f317b8908e0fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setStartCell</definition>
+        <argsstring>(int startCellIn)</argsstring>
+        <name>setStartCell</name>
+        <param>
+          <type>int</type>
+          <declname>startCellIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="40" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1ad28a71f780395eed439936e1c787ee8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setEndCell</definition>
+        <argsstring>(int endCellIn)</argsstring>
+        <name>setEndCell</name>
+        <param>
+          <type>int</type>
+          <declname>endCellIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="41" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a8c608e477d058e326f60b41209f377ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setResolution</definition>
+        <argsstring>(int resolutionIn)</argsstring>
+        <name>setResolution</name>
+        <param>
+          <type>int</type>
+          <declname>resolutionIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="42" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1ac09230548d536dcc17b131ca97d48f11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setRadius</definition>
+        <argsstring>(int radiusIn)</argsstring>
+        <name>setRadius</name>
+        <param>
+          <type>int</type>
+          <declname>radiusIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="43" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a4da4485ffb15a0d22cfe17b0e9c9c2e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpectrumCreator::setBApplied</definition>
+        <argsstring>(py::array_t&lt; double &gt; BAppliedIn)</argsstring>
+        <name>setBApplied</name>
+        <param>
+          <type>py::array_t&lt; double &gt;</type>
+          <declname>BAppliedIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="44" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a0d219ebef56f7ab432ceb5706a9669cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+        <definition>MomentField SpectrumCreator::getMomentField</definition>
+        <argsstring>()</argsstring>
+        <name>getMomentField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="47" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a238e280cb3f1c51de6075dd1b70115fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sample" kindref="compound">Sample</ref></type>
+        <definition>Sample SpectrumCreator::getSample</definition>
+        <argsstring>()</argsstring>
+        <name>getSample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="48" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a73ddbac63c108000a4ebc009dc80e9b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; SpectrumCreator::getMuonPositions</definition>
+        <argsstring>()</argsstring>
+        <name>getMuonPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="49" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a5f4caeb95b7e652367184d549f1c0ad2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpectrumCreator::getStartCell</definition>
+        <argsstring>()</argsstring>
+        <name>getStartCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="50" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a02c019506625338c5bdc5142c23e95c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpectrumCreator::getEndCell</definition>
+        <argsstring>()</argsstring>
+        <name>getEndCell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="51" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1aace4663a4065b854d730f0616b57fcba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpectrumCreator::getResolution</definition>
+        <argsstring>()</argsstring>
+        <name>getResolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="52" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a1d5c3c8d02f76002539b5cd5178b6242" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpectrumCreator::getRadius</definition>
+        <argsstring>()</argsstring>
+        <name>getRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="53" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1ac684eb71bc78e7a6ba09ddb5726e439b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt;double&gt; SpectrumCreator::getBApplied</definition>
+        <argsstring>()</argsstring>
+        <name>getBApplied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="54" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spectrum_creator_1a0ca83ad1943d3a66182d18d096298ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>py::array_t&lt; double &gt;</type>
+        <definition>py::array_t&lt; double &gt; SpectrumCreator::outputSpectrum</definition>
+        <argsstring>()</argsstring>
+        <name>outputSpectrum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Obtain a 1d array of magnetic field components sampled throughout the crystal, which can be used to generate a spectrum. <simplesect kind="return"><para>1d array of magnetic field components sampled through the crystal. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="57" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.cpp" bodystart="23" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" line="21" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/SpectrumCreator.h" bodystart="20" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_spectrum_creator_1afe0f1b018c2d551d593b379b1e71cded" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>BApplied</name></member>
+      <member refid="class_spectrum_creator_1a207d06591b7e506e3d1fd3b7a1a6bdc5" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>endCell</name></member>
+      <member refid="class_spectrum_creator_1ac684eb71bc78e7a6ba09ddb5726e439b" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getBApplied</name></member>
+      <member refid="class_spectrum_creator_1a02c019506625338c5bdc5142c23e95c8" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getEndCell</name></member>
+      <member refid="class_spectrum_creator_1a0d219ebef56f7ab432ceb5706a9669cb" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getMomentField</name></member>
+      <member refid="class_spectrum_creator_1a73ddbac63c108000a4ebc009dc80e9b4" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getMuonPositions</name></member>
+      <member refid="class_spectrum_creator_1a1d5c3c8d02f76002539b5cd5178b6242" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getRadius</name></member>
+      <member refid="class_spectrum_creator_1aace4663a4065b854d730f0616b57fcba" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getResolution</name></member>
+      <member refid="class_spectrum_creator_1a238e280cb3f1c51de6075dd1b70115fb" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getSample</name></member>
+      <member refid="class_spectrum_creator_1a5f4caeb95b7e652367184d549f1c0ad2" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>getStartCell</name></member>
+      <member refid="class_spectrum_creator_1ab73b358dc19570292e2cc93bf6f63f13" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>momentField</name></member>
+      <member refid="class_spectrum_creator_1a4641fc0cfb557203801958a73f22747d" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>muonPositions</name></member>
+      <member refid="class_spectrum_creator_1a0ca83ad1943d3a66182d18d096298ce0" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>outputSpectrum</name></member>
+      <member refid="class_spectrum_creator_1ae65c9aeef62e02171f4564c9f3197945" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>radius</name></member>
+      <member refid="class_spectrum_creator_1a7f2bce9a62b1ecfe8e97d917560a860f" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>resolution</name></member>
+      <member refid="class_spectrum_creator_1a02848fe8e13b13c67ee1df233af1d614" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>sample</name></member>
+      <member refid="class_spectrum_creator_1a4da4485ffb15a0d22cfe17b0e9c9c2e9" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setBApplied</name></member>
+      <member refid="class_spectrum_creator_1ad28a71f780395eed439936e1c787ee8e" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setEndCell</name></member>
+      <member refid="class_spectrum_creator_1a2517445e4cac9908786385ef90bf2cc9" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setMomentField</name></member>
+      <member refid="class_spectrum_creator_1a21c6f6365995673c8eb8248a9752a7c6" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setMuonPositions</name></member>
+      <member refid="class_spectrum_creator_1ac09230548d536dcc17b131ca97d48f11" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setRadius</name></member>
+      <member refid="class_spectrum_creator_1a8c608e477d058e326f60b41209f377ee" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setResolution</name></member>
+      <member refid="class_spectrum_creator_1a2093c87971d428bd4193de06546f4a44" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setSample</name></member>
+      <member refid="class_spectrum_creator_1aaf0c2136aec63f2fdd8f317b8908e0fd" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>setStartCell</name></member>
+      <member refid="class_spectrum_creator_1af6ed12941c627652ba02a012b1464f97" prot="public" virt="non-virtual"><scope>SpectrumCreator</scope><name>SpectrumCreator</name></member>
+      <member refid="class_spectrum_creator_1afe3a3c2d31a2ee83e4d3b60199ebe097" prot="private" virt="non-virtual"><scope>SpectrumCreator</scope><name>startCell</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

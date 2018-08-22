@@ -18,7 +18,10 @@ PYBIND11_MODULE(MuDip, m)
         .def(py::init<double, std::string>());
 
     py::class_<Sample>(m, "Sample")  // The user shouldn't instantiate this but required to instantiate its child classes (only Cu2OSeO3 at present)
-        .def(py::init<double, MomentField>());
+        .def(py::init<double, MomentField>())
+        .def("getDipoleField", &Sample::getDipoleField)
+        .def("getLorentzField", &Sample::getLorentzField)
+        .def("getTotalField", &Sample::getTotalField);
 
     py::class_<Cu2OSeO3, Sample>(m, "Cu2OSeO3")
         .def(py::init<MomentField>());

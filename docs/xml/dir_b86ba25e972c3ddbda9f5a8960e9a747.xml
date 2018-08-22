@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_b86ba25e972c3ddbda9f5a8960e9a747" kind="dir">
+    <compoundname>/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip</compoundname>
+    <innerfile refid="_bindings_8cpp">Bindings.cpp</innerfile>
+    <innerfile refid="_cell_atom_8cpp">CellAtom.cpp</innerfile>
+    <innerfile refid="_cell_atom_8h">CellAtom.h</innerfile>
+    <innerfile refid="_constants_8h">Constants.h</innerfile>
+    <innerfile refid="_dipole_8cpp">Dipole.cpp</innerfile>
+    <innerfile refid="_dipole_8h">Dipole.h</innerfile>
+    <innerfile refid="_lorentz_sphere_8cpp">LorentzSphere.cpp</innerfile>
+    <innerfile refid="_lorentz_sphere_8h">LorentzSphere.h</innerfile>
+    <innerfile refid="_moment_field_8cpp">MomentField.cpp</innerfile>
+    <innerfile refid="_moment_field_8h">MomentField.h</innerfile>
+    <innerfile refid="_sample_8cpp">Sample.cpp</innerfile>
+    <innerfile refid="_sample_8h">Sample.h</innerfile>
+    <innerfile refid="_spectrum_creator_8cpp">SpectrumCreator.cpp</innerfile>
+    <innerfile refid="_spectrum_creator_8h">SpectrumCreator.h</innerfile>
+    <innerfile refid="_vector_field_creator_8cpp">VectorFieldCreator.cpp</innerfile>
+    <innerfile refid="_vector_field_creator_8h">VectorFieldCreator.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_bindings_8cpp" kind="file" language="C++">
+    <compoundname>Bindings.cpp</compoundname>
+    <includes local="no">pybind11/pybind11.h</includes>
+    <includes local="no">pybind11/numpy.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="_moment_field_8h" local="yes">MomentField.h</includes>
+    <includes refid="_spectrum_creator_8h" local="yes">SpectrumCreator.h</includes>
+    <includes refid="_vector_field_creator_8h" local="yes">VectorFieldCreator.h</includes>
+    <includes local="yes">Crystals/Cu2OSeO3.h</includes>
+    <includes local="yes">/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Sample.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>cmath</label>
+      </node>
+      <node id="14">
+        <label>VectorFieldCreator.h</label>
+        <link refid="_vector_field_creator_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MomentField.h</label>
+        <link refid="_moment_field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="0">
+        <label>/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Bindings.cpp</label>
+        <link refid="_bindings_8cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11/numpy.h</label>
+      </node>
+      <node id="9">
+        <label>Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SpectrumCreator.h</label>
+        <link refid="_spectrum_creator_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>CellAtom.h</label>
+        <link refid="_cell_atom_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="15">
+        <label>Crystals/Cu2OSeO3.h</label>
+      </node>
+      <node id="12">
+        <label>Sample.h</label>
+        <link refid="_sample_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>LorentzSphere.h</label>
+        <link refid="_lorentz_sphere_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_bindings_8cpp_1a20aea607da5f18b68ee2c46faf62a105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PYBIND11_MODULE</definition>
+        <argsstring>(MuDip, m)</argsstring>
+        <name>PYBIND11_MODULE</name>
+        <param>
+          <type>MuDip</type>
+        </param>
+        <param>
+          <type>m</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Bindings.cpp" line="12" column="1" bodyfile="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Bindings.cpp" bodystart="12" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;pybind11/pybind11.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pybind11/numpy.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_moment_field_8h" kindref="compound">MomentField.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_spectrum_creator_8h" kindref="compound">SpectrumCreator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vector_field_creator_8h" kindref="compound">VectorFieldCreator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Crystals/Cu2OSeO3.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sample_8h" kindref="compound">Sample.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">py<sp/>=<sp/>pybind11;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">PYBIND11_MODULE(MuDip,<sp/>m)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;MomentField&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;MomentField&quot;</highlight><highlight class="normal">)<sp/><sp/></highlight><highlight class="comment">//<sp/>Should<sp/>add<sp/>all<sp/>functions<sp/>really</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;py::array_t&lt;double&gt;&gt;())</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;py::array_t&lt;double&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>py::array_t&lt;double&gt;&gt;())</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;double,<sp/>std::string&gt;());</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;Sample&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;Sample&quot;</highlight><highlight class="normal">)<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>user<sp/>shouldn&apos;t<sp/>instantiate<sp/>this<sp/>but<sp/>required<sp/>to<sp/>instantiate<sp/>its<sp/>child<sp/>classes<sp/>(only<sp/>Cu2OSeO3<sp/>at<sp/>present)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;double,<sp/>MomentField&gt;());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;Cu2OSeO3,<sp/>Sample&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;Cu2OSeO3&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;MomentField&gt;());</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;SpectrumCreator&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;SpectrumCreator&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;<ref refid="class_moment_field" kindref="compound">MomentField</ref>,<sp/><ref refid="class_sample" kindref="compound">Sample</ref>,<sp/>py::array_t&lt;double&gt;,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>py::array_t&lt;double&gt;&gt;())</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;outputSpectrum&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_spectrum_creator_1a0ca83ad1943d3a66182d18d096298ce0" kindref="member">SpectrumCreator::outputSpectrum</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;VectorFieldCreator&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;VectorFieldCreator&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(py::init&lt;<ref refid="class_moment_field" kindref="compound">MomentField</ref>,<sp/><ref refid="class_sample" kindref="compound">Sample</ref>,<sp/>py::array_t&lt;double&gt;,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>py::array_t&lt;double&gt;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;())</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;outputBField&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_vector_field_creator_1a160b37371b6853430e4d563920eca2e0" kindref="member">VectorFieldCreator::outputBField</ref>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;outputMField&quot;</highlight><highlight class="normal">,<sp/>&amp;VectorFieldCreator::outputMField);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Bindings.cpp"/>
+  </compounddef>
+</doxygen>

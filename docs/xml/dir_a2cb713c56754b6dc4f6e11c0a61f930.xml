@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a2cb713c56754b6dc4f6e11c0a61f930" kind="dir">
+    <compoundname>/Users/rossknapman/Documents/Employment/SummerPlacements</compoundname>
+    <innerdir refid="dir_ebee93cf9e4497c215cc1df6d9a12466">/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/"/>
+  </compounddef>
+</doxygen>

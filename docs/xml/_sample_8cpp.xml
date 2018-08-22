@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_sample_8cpp" kind="file" language="C++">
+    <compoundname>Sample.cpp</compoundname>
+    <includes refid="_sample_8h" local="yes">Sample.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_lorentz_sphere_8h" local="yes">LorentzSphere.h</includes>
+    <incdepgraph>
+      <node id="116">
+        <label>cmath</label>
+      </node>
+      <node id="117">
+        <label>MomentField.h</label>
+        <link refid="_moment_field_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>string</label>
+      </node>
+      <node id="120">
+        <label>pybind11/numpy.h</label>
+      </node>
+      <node id="110">
+        <label>/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Sample.cpp</label>
+        <link refid="_sample_8cpp"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>CellAtom.h</label>
+        <link refid="_cell_atom_8h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>vector</label>
+      </node>
+      <node id="111">
+        <label>Sample.h</label>
+        <link refid="_sample_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>iostream</label>
+      </node>
+      <node id="122">
+        <label>LorentzSphere.h</label>
+        <link refid="_lorentz_sphere_8h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sample_8h" kindref="compound">Sample.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_lorentz_sphere_8h" kindref="compound">LorentzSphere.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Sample::Sample(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aIn,<sp/><ref refid="class_moment_field" kindref="compound">MomentField</ref><sp/>momentFieldIn)<sp/>:<sp/>momentField(momentFieldIn)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>setA(aIn);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>setMomentField(momentFieldIn);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">std::vector&lt;double&gt;<sp/><ref refid="class_sample_1ab69c1e64551cb65fb065935681d4f3a7" kindref="member">Sample::getDipoleField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref><sp/>*lorentzSphere<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref>(x,<sp/>y,<sp/>z,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>radius);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lorentzSphere-&gt;<ref refid="class_lorentz_sphere_1a58e768d89c89cbb12759c49d36f0c9c0" kindref="member">calculateDipoleField</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">std::vector&lt;double&gt;<sp/><ref refid="class_sample_1ab00e5749ad48685fcdf0f15948d4ae71" kindref="member">Sample::getLorentzField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref><sp/>*lorentzSphere<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref>(x,<sp/>y,<sp/>z,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>radius);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lorentzSphere-&gt;<ref refid="class_lorentz_sphere_1a061f2c2d2635348d94e14371a32f5758" kindref="member">calculateLorentzField</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">std::vector&lt;double&gt;<sp/><ref refid="class_sample_1aaddc8d6ed898e1c76ca6005fa523e702" kindref="member">Sample::getTotalField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>dipoleField<sp/>=<sp/><ref refid="class_sample_1ab69c1e64551cb65fb065935681d4f3a7" kindref="member">getDipoleField</ref>(x,<sp/>y,<sp/>z,<sp/>radius);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>lorentzField<sp/>=<sp/><ref refid="class_sample_1ab00e5749ad48685fcdf0f15948d4ae71" kindref="member">getLorentzField</ref>(x,<sp/>y,<sp/>z,<sp/>radius);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>totalField(dipoleField.size());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>addition<sp/>of<sp/>dipole<sp/>and<sp/>Lorentz<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>totalField.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalField[i]<sp/>=<sp/>dipoleField[i]<sp/>+<sp/>lorentzField[i];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>totalField;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/rossknapman/Documents/Employment/SummerPlacements/Summer2018/SkyrmionsInternship/FieldSimulation/MuDip/MuDip/Sample.cpp"/>
+  </compounddef>
+</doxygen>
