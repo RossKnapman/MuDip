@@ -39,11 +39,11 @@ py::array_t<double> VectorFieldCreator::outputBField()
                 double xPos = i + muonPositions.mutable_at(muonIndex, 0);
                 double yPos = j + muonPositions.mutable_at(muonIndex, 1);
                 double zPos = z + muonPositions.mutable_at(muonIndex, 2);
-                std::vector<double> Bfield = sample.getTotalField(xPos, yPos, zPos, radius);
+                py::array_t<double> Bfield = sample.getTotalField(xPos, yPos, zPos, radius);
                 outputBArray.mutable_at(0, Bindex) = xPos;
                 outputBArray.mutable_at(1, Bindex) = yPos;
-                outputBArray.mutable_at(2, Bindex) = Bfield[0] + BApplied.mutable_at(0);
-                outputBArray.mutable_at(3, Bindex) = Bfield[1] + BApplied.mutable_at(1);
+                outputBArray.mutable_at(2, Bindex) = Bfield.mutable_at(0) + BApplied.mutable_at(0);
+                outputBArray.mutable_at(3, Bindex) = Bfield.mutable_at(1) + BApplied.mutable_at(1);
                 Bindex++;
             }
         }
