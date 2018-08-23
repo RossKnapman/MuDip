@@ -81,10 +81,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#test-documentation">Test Documentation</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="future.html">Future</a></li>
 </ul>
 
@@ -152,8 +149,42 @@
             
   <div class="section" id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="test-documentation">
-<h2>Test Documentation<a class="headerlink" href="#test-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Note that not all of the classes and method displayed here are available to the user from Python.</p>
+<dl class="class">
+<dt id="_CPPv38Cu2OSeO3">
+<span id="_CPPv28Cu2OSeO3"></span><span id="Cu2OSeO3"></span><span class="target" id="class_cu2_o_se_o3"></span><em class="property">class </em><code class="descname">Cu2OSeO3</code> : <em class="property">public</em> <a class="reference internal" href="#_CPPv36Sample" title="Sample">Sample</a><a class="headerlink" href="#_CPPv38Cu2OSeO3" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="_CPPv38CellAtom">
+<span id="_CPPv28CellAtom"></span><span id="CellAtom"></span><span class="target" id="class_cell_atom"></span><em class="property">class </em><code class="descname">CellAtom</code><a class="headerlink" href="#_CPPv38CellAtom" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="_CPPv36Dipole">
+<span id="_CPPv26Dipole"></span><span id="Dipole"></span><span class="target" id="class_dipole"></span><em class="property">class </em><code class="descname">Dipole</code><a class="headerlink" href="#_CPPv36Dipole" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N6Dipole14calculateFieldEddd">
+<span id="_CPPv2N6Dipole14calculateFieldEddd"></span><span id="Dipole::calculateField__double.double.double"></span><span class="target" id="class_dipole_1a5027f01fb1bd8c04bfb635badee6be61"></span>std::vector&lt;double&gt; <code class="descname">calculateField</code><span class="sig-paren">(</span>double <em>targetX</em>, double <em>targetY</em>, double <em>targetZ</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N6Dipole14calculateFieldEddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculate the field due to a single dipole at an arbitrary point. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The dipole magnetic field as a vector. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">x</span></code>: The x-position of the point at which we wish to evaluate the dipole field. </li>
+<li><code class="docutils literal notranslate"><span class="pre">y</span></code>: The y-position of the point at which we wish to evaluate the dipole field. </li>
+<li><code class="docutils literal notranslate"><span class="pre">z</span></code>: The z-position of the point at which we wish to evaluate the dipole field. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 <dl class="class">
 <dt id="_CPPv313LorentzSphere">
 <span id="_CPPv213LorentzSphere"></span><span id="LorentzSphere"></span><span class="target" id="class_lorentz_sphere"></span><em class="property">class </em><code class="descname">LorentzSphere</code><a class="headerlink" href="#_CPPv313LorentzSphere" title="Permalink to this definition">¶</a><br /></dt>
@@ -182,7 +213,128 @@
 </div>
 </dd></dl>
 
+<dl class="class">
+<dt id="_CPPv311MomentField">
+<span id="_CPPv211MomentField"></span><span id="MomentField"></span><span class="target" id="class_moment_field"></span><em class="property">class </em><code class="descname">MomentField</code><a class="headerlink" href="#_CPPv311MomentField" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N11MomentField9getMomentEddd">
+<span id="_CPPv2N11MomentField9getMomentEddd"></span><span id="MomentField::getMoment__double.double.double"></span><span class="target" id="class_moment_field_1ac53a73c633968b223206e79b040785e3"></span>std::vector&lt;double&gt; <code class="descname">getMoment</code><span class="sig-paren">(</span>double <em>x</em>, double <em>y</em>, double <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N11MomentField9getMomentEddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the magnetic moment for an atom placed at an arbitrary point. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">x</span></code>: The x-position of the point to obtain the moment </li>
+<li><code class="docutils literal notranslate"><span class="pre">y</span></code>: The y-position of the point to obtain the moment </li>
+<li><code class="docutils literal notranslate"><span class="pre">z</span></code>: The z-position of the point to obtain the moment </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 </div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv36Sample">
+<span id="_CPPv26Sample"></span><span id="Sample"></span><span class="target" id="class_sample"></span><em class="property">class </em><code class="descname">Sample</code><a class="headerlink" href="#_CPPv36Sample" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="#class_cu2_o_se_o3"><span class="std std-ref">Cu2OSeO3</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N6Sample14getDipoleFieldEdddd">
+<span id="_CPPv2N6Sample14getDipoleFieldEdddd"></span><span id="Sample::getDipoleField__double.double.double.double"></span><span class="target" id="class_sample_1a3ca721744b709a5a6e76705b7583a31c"></span>py::array_t&lt;double&gt; <code class="descname">getDipoleField</code><span class="sig-paren">(</span>double <em>x</em>, double <em>y</em>, double <em>z</em>, double <em>radius</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N6Sample14getDipoleFieldEdddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the field as a result of dipoles wihtin a Lorentz sphere at an arbitrary point. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The dipolar field as a vector. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">x</span></code>: The x-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">y</span></code>: The y-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">z</span></code>: The z-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">radius</span></code>: The radius of the Lorentz sphere. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N6Sample15getLorentzFieldEdddd">
+<span id="_CPPv2N6Sample15getLorentzFieldEdddd"></span><span id="Sample::getLorentzField__double.double.double.double"></span><span class="target" id="class_sample_1aae12567d502fcc6bbd2a6a5e390250a4"></span>py::array_t&lt;double&gt; <code class="descname">getLorentzField</code><span class="sig-paren">(</span>double <em>x</em>, double <em>y</em>, double <em>z</em>, double <em>radius</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N6Sample15getLorentzFieldEdddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the Lorentz field for a Lorentz sphere of a given radius at an arbitrary point. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The Lorentz field as a vector. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">x</span></code>: The x-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">y</span></code>: The y-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">z</span></code>: The z-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">radius</span></code>: The radius of the Lorentz sphere. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N6Sample13getTotalFieldEdddd">
+<span id="_CPPv2N6Sample13getTotalFieldEdddd"></span><span id="Sample::getTotalField__double.double.double.double"></span><span class="target" id="class_sample_1ab500cba49bb9ec691d668cf8d82d1ea4"></span>py::array_t&lt;double&gt; <code class="descname">getTotalField</code><span class="sig-paren">(</span>double <em>x</em>, double <em>y</em>, double <em>z</em>, double <em>radius</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N6Sample13getTotalFieldEdddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the total field (dipolar + Lorentz) at a given point. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The total field as a vector. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">x</span></code>: The x-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">y</span></code>: The y-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">z</span></code>: The z-position of the point at which the dipole field is to be evaluated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">radius</span></code>: The radius of teh Lorentz sphere. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv315SpectrumCreator">
+<span id="_CPPv215SpectrumCreator"></span><span id="SpectrumCreator"></span><span class="target" id="class_spectrum_creator"></span><em class="property">class </em><code class="descname">SpectrumCreator</code><a class="headerlink" href="#_CPPv315SpectrumCreator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N15SpectrumCreator14outputSpectrumEv">
+<span id="_CPPv2N15SpectrumCreator14outputSpectrumEv"></span><span id="SpectrumCreator::outputSpectrum"></span><span class="target" id="class_spectrum_creator_1a0ca83ad1943d3a66182d18d096298ce0"></span>py::array_t&lt;double&gt; <code class="descname">outputSpectrum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N15SpectrumCreator14outputSpectrumEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Obtain a 1d array of magnetic field components sampled throughout the crystal, which can be used to generate a spectrum. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>1d array of magnetic field components sampled through the crystal. </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv318VectorFieldCreator">
+<span id="_CPPv218VectorFieldCreator"></span><span id="VectorFieldCreator"></span><span class="target" id="class_vector_field_creator"></span><em class="property">class </em><code class="descname">VectorFieldCreator</code><a class="headerlink" href="#_CPPv318VectorFieldCreator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N18VectorFieldCreator12outputBFieldEv">
+<span id="_CPPv2N18VectorFieldCreator12outputBFieldEv"></span><span id="VectorFieldCreator::outputBField"></span><span class="target" id="class_vector_field_creator_1a160b37371b6853430e4d563920eca2e0"></span>py::array_t&lt;double&gt; <code class="descname">outputBField</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18VectorFieldCreator12outputBFieldEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Outputs the information required to plot a 2D slice of the magnetic field within the sample. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A 2d array of the form [[x1, x2, …], [y1, y1, …], [B_x1, B_x2, …], [B_y1, B_y2, …]] where xi and yi are the x and y positions respectively, and Bxi and Byi are the x- and y-components of the magnetic fields at these points. </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </div>
 
 

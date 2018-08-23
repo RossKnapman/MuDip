@@ -160,6 +160,6 @@ texinfo_documents = [
 
 extensions = ['breathe']
 
-breathe_projects = {'MuDip': 'xml/'}
+breathe_projects = {'MuDip': 'DoxygenOutput/xml/'}
 breathe_default_project = 'MuDip'
 breathe_domain_by_extension = {'h': 'cpp'}

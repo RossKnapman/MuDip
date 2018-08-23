@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_dipole_8cpp" kind="file" language="C++">
+    <compoundname>Dipole.cpp</compoundname>
+    <includes refid="_dipole_8h" local="yes">Dipole.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">numeric</includes>
+    <includes refid="_constants_8h" local="yes">Constants.h</includes>
+    <incdepgraph>
+      <node id="74">
+        <label>cmath</label>
+      </node>
+      <node id="76">
+        <label>numeric</label>
+      </node>
+      <node id="71">
+        <label>Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>vector</label>
+      </node>
+      <node id="75">
+        <label>iostream</label>
+      </node>
+      <node id="70">
+        <label>MuDip/Dipole.cpp</label>
+        <link refid="_dipole_8cpp"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dipole_8h" kindref="compound">Dipole.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8h" kindref="compound">Constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Dipole<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">Dipole::Dipole(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zIn,<sp/>std::vector&lt;double&gt;<sp/>momentIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latticeConstantIn)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>setX(xIn);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>setY(yIn);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>setZ(zIn);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>setMoment(momentIn);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>setLatticeConstant(latticeConstantIn);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">std::vector&lt;double&gt;<sp/><ref refid="class_dipole_1a5027f01fb1bd8c04bfb635badee6be61" kindref="member">Dipole::calculateField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetX,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetY,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetZ)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>vector<sp/>of<sp/>point<sp/>at<sp/>which<sp/>field<sp/>evaluated<sp/>(inputs<sp/>in<sp/>unit<sp/>cells,<sp/>but<sp/>converted<sp/>to<sp/>Angstroms)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>R{targetX<sp/>*<sp/>latticeConstant,<sp/>targetY<sp/>*<sp/>latticeConstant,<sp/>targetZ<sp/>*<sp/>latticeConstant};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>vector<sp/>of<sp/>dipole<sp/>(in<sp/>unit<sp/>cells)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>r_d{x<sp/>*<sp/>latticeConstant,<sp/>y<sp/>*<sp/>latticeConstant,<sp/>z<sp/>*<sp/>latticeConstant};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>pointing<sp/>from<sp/>dipole<sp/>to<sp/>point<sp/>where<sp/>field<sp/>evaluated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>r;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>R.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r.push_back(r_d[i]<sp/>-<sp/>R[i]);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>B(r.size());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>magnitude<sp/>of<sp/>r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rMag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>r.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rMag<sp/>=<sp/>rMag<sp/>+<sp/>pow(r[i],<sp/>2);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>rMag<sp/>=<sp/>sqrt(rMag);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>r<sp/>unit<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>rUnit(r.size());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rUnit.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rUnit[i]<sp/>=<sp/>r[i]<sp/>/<sp/>rMag;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Evaluate<sp/>the<sp/>m<sp/>dot<sp/>rHat<sp/>inner<sp/>product<sp/>in<sp/>the<sp/>B-field<sp/>expression</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mrInnerProd<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>moment.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mrInnerProd<sp/>=<sp/>mrInnerProd<sp/>+<sp/>moment[i]<sp/>*<sp/>rUnit[i];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>r.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Preceeding<sp/>10^23<sp/>is<sp/>the<sp/>mu_0<sp/>/<sp/>4pi<sp/>=<sp/>10^-7,<sp/>multiplied<sp/>by<sp/>1/Angstrom^3<sp/>=<sp/>10^30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>May<sp/>be<sp/>more<sp/>efficient<sp/>to<sp/>just<sp/>scale<sp/>the<sp/>units<sp/>at<sp/>the<sp/>end,<sp/>rather<sp/>than<sp/>with<sp/>each<sp/>dipole</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B[i]<sp/>=<sp/>pow(10,<sp/>23)<sp/>*<sp/>constants::bohrMagneton<sp/>*<sp/>pow(rMag,<sp/>-3)<sp/>*<sp/>(3<sp/>*<sp/>mrInnerProd<sp/>*<sp/>rUnit[i]<sp/>-<sp/>moment[i]);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>B;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="MuDip/Dipole.cpp"/>
+  </compounddef>
+</doxygen>

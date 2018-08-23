@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_sample_8cpp" kind="file" language="C++">
+    <compoundname>Sample.cpp</compoundname>
+    <includes refid="_sample_8h" local="yes">Sample.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_lorentz_sphere_8h" local="yes">LorentzSphere.h</includes>
+    <includes local="no">pybind11/pybind11.h</includes>
+    <includes local="no">pybind11/numpy.h</includes>
+    <incdepgraph>
+      <node id="145">
+        <label>cmath</label>
+      </node>
+      <node id="146">
+        <label>MomentField.h</label>
+        <link refid="_moment_field_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>string</label>
+      </node>
+      <node id="149">
+        <label>pybind11/numpy.h</label>
+      </node>
+      <node id="139">
+        <label>MuDip/Sample.cpp</label>
+        <link refid="_sample_8cpp"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>CellAtom.h</label>
+        <link refid="_cell_atom_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>vector</label>
+      </node>
+      <node id="152">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="140">
+        <label>Sample.h</label>
+        <link refid="_sample_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>iostream</label>
+      </node>
+      <node id="151">
+        <label>LorentzSphere.h</label>
+        <link refid="_lorentz_sphere_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sample_8h" kindref="compound">Sample.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_lorentz_sphere_8h" kindref="compound">LorentzSphere.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pybind11/pybind11.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pybind11/numpy.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">py<sp/>=<sp/>pybind11;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">Sample::Sample(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aIn,<sp/><ref refid="class_moment_field" kindref="compound">MomentField</ref><sp/>momentFieldIn)<sp/>:<sp/>momentField(momentFieldIn)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>setA(aIn);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>setMomentField(momentFieldIn);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">py::array_t&lt;double&gt;<sp/><ref refid="class_sample_1a3ca721744b709a5a6e76705b7583a31c" kindref="member">Sample::getDipoleField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref><sp/>*lorentzSphere<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref>(x,<sp/>y,<sp/>z,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>radius);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>dipoleField<sp/>=<sp/>lorentzSphere-&gt;<ref refid="class_lorentz_sphere_1a58e768d89c89cbb12759c49d36f0c9c0" kindref="member">calculateDipoleField</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>output<sp/>dipole<sp/>field<sp/>to<sp/>numpy<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>py::array_t&lt;double&gt;<sp/>outputDipoleField(dipoleField.size());</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dipoleField.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputDipoleField.mutable_at(i)<sp/>=<sp/>dipoleField[i];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outputDipoleField;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">py::array_t&lt;double&gt;<sp/><ref refid="class_sample_1aae12567d502fcc6bbd2a6a5e390250a4" kindref="member">Sample::getLorentzField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref><sp/>*lorentzSphere<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref>(x,<sp/>y,<sp/>z,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>radius);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>lorentzField<sp/>=<sp/>lorentzSphere-&gt;<ref refid="class_lorentz_sphere_1a061f2c2d2635348d94e14371a32f5758" kindref="member">calculateLorentzField</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>the<sp/>Lorentz<sp/>field<sp/>to<sp/>numpy<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>py::array_t&lt;double&gt;<sp/>outputLorentzField(lorentzField.size());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>lorentzField.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputLorentzField.mutable_at(i)<sp/>=<sp/>lorentzField[i];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outputLorentzField;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">py::array_t&lt;double&gt;<sp/><ref refid="class_sample_1ab500cba49bb9ec691d668cf8d82d1ea4" kindref="member">Sample::getTotalField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>py::array_t&lt;double&gt;<sp/>dipoleField<sp/>=<sp/><ref refid="class_sample_1a3ca721744b709a5a6e76705b7583a31c" kindref="member">getDipoleField</ref>(x,<sp/>y,<sp/>z,<sp/>radius);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>py::array_t&lt;double&gt;<sp/>lorentzField<sp/>=<sp/><ref refid="class_sample_1aae12567d502fcc6bbd2a6a5e390250a4" kindref="member">getLorentzField</ref>(x,<sp/>y,<sp/>z,<sp/>radius);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>py::array_t&lt;double&gt;<sp/>totalField(dipoleField.size());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>addition<sp/>of<sp/>dipole<sp/>and<sp/>Lorentz<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>len(totalField);<sp/>i++)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalField.mutable_at(i)<sp/>=<sp/>dipoleField.mutable_at(i)<sp/>+<sp/>lorentzField.mutable_at(i);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>totalField;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="MuDip/Sample.cpp"/>
+  </compounddef>
+</doxygen>

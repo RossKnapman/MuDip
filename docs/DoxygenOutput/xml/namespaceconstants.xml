@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceconstants" kind="namespace" language="C++">
+    <compoundname>constants</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_constants_8h_1a6b6a250b7f90644d68d16b0b883de1e4" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double constants::mu_0</definition>
+        <argsstring></argsstring>
+        <name>mu_0</name>
+        <initializer>= 4 * M_PI * pow(10, -7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MuDip/Constants.h" line="17" column="1" bodyfile="MuDip/Constants.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_constants_8h_1a62457a9fc9806643721d3e9f1a1ff58e" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double constants::bohrMagneton</definition>
+        <argsstring></argsstring>
+        <name>bohrMagneton</name>
+        <initializer>= 9.27400999e-24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MuDip/Constants.h" line="18" column="1" bodyfile="MuDip/Constants.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MuDip/Constants.h" line="16" column="1"/>
+  </compounddef>
+</doxygen>

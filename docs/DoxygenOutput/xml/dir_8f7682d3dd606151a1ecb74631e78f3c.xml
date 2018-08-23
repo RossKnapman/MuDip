@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_8f7682d3dd606151a1ecb74631e78f3c" kind="dir">
+    <compoundname>MuDip/Crystals</compoundname>
+    <innerfile refid="_cu2_o_se_o3_8cpp">Cu2OSeO3.cpp</innerfile>
+    <innerfile refid="_cu2_o_se_o3_8h">Cu2OSeO3.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MuDip/Crystals/"/>
+  </compounddef>
+</doxygen>

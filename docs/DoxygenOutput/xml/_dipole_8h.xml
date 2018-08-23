@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_dipole_8h" kind="file" language="C++">
+    <compoundname>Dipole.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="_constants_8h" local="yes">Constants.h</includes>
+    <includedby refid="_lorentz_sphere_8h" local="yes">MuDip/LorentzSphere.h</includedby>
+    <includedby refid="_cell_atom_8h" local="yes">MuDip/CellAtom.h</includedby>
+    <includedby refid="_dipole_8cpp" local="yes">MuDip/Dipole.cpp</includedby>
+    <incdepgraph>
+      <node id="81">
+        <label>cmath</label>
+      </node>
+      <node id="78">
+        <label>MuDip/Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="85">
+        <label>MuDip/VectorFieldCreator.h</label>
+        <link refid="_vector_field_creator_8h"/>
+      </node>
+      <node id="82">
+        <label>MuDip/Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>MuDip/SpectrumCreator.h</label>
+        <link refid="_spectrum_creator_8h"/>
+      </node>
+      <node id="88">
+        <label>MuDip/Crystals/Cu2OSeO3.h</label>
+        <link refid="_cu2_o_se_o3_8h"/>
+      </node>
+      <node id="86">
+        <label>MuDip/CellAtom.h</label>
+        <link refid="_cell_atom_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>MuDip/Sample.h</label>
+        <link refid="_sample_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>MuDip/LorentzSphere.h</label>
+        <link refid="_lorentz_sphere_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_dipole" prot="public">Dipole</innerclass>
+    <briefdescription>
+<para>Stores information about individual dipole, and allows the evaluation of its resulting field at an arbitrary point. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ross Knapman </para></simplesect>
+<simplesect kind="date"><para>21/08/2018 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>INC_3DDIPOLEFIELD_DIPOLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_3DDIPOLEFIELD_DIPOLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8h" kindref="compound">Constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_dipole" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_dipole" kindref="compound">Dipole</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x;<sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>in<sp/>unit<sp/>cells</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>moment;<sp/><sp/></highlight><highlight class="comment">//<sp/>Moment<sp/>vector<sp/>in<sp/>Bohr<sp/>magnetons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latticeConstant;<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>lattice<sp/>constant<sp/>in<sp/>Angstroms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dipole" kindref="compound">Dipole</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zIn,<sp/>std::vector&lt;double&gt;<sp/>momentIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latticeConstantIn);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setX(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xIn)<sp/>{<sp/>x<sp/>=<sp/>xIn;<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setY(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yIn)<sp/>{<sp/>y<sp/>=<sp/>yIn;<sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setZ(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zIn)<sp/>{<sp/>z<sp/>=<sp/>zIn;<sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMoment(std::vector&lt;double&gt;<sp/>momentIn)<sp/>{<sp/>moment<sp/>=<sp/>momentIn;<sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLatticeConstant(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latticeConstantIn)<sp/>{<sp/>latticeConstant<sp/>=<sp/>latticeConstantIn;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getX()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getY()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getZ()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>z;<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>getMoment()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>moment;<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getLatticeConstant()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>latticeConstant;}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Misc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_dipole_1a5027f01fb1bd8c04bfb635badee6be61" kindref="member">calculateField</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetX,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetY,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>targetZ);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//INC_3DDIPOLEFIELD_DIPOLE_H</highlight></codeline>
+    </programlisting>
+    <location file="MuDip/Dipole.h"/>
+  </compounddef>
+</doxygen>

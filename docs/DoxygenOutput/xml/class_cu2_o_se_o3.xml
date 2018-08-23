@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_cu2_o_se_o3" kind="class" language="C++" prot="public">
+    <compoundname>Cu2OSeO3</compoundname>
+    <basecompoundref refid="class_sample" prot="public" virt="non-virtual">Sample</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cu2_o_se_o3_1ae23b756707e508607a52e11301fca560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cu2OSeO3::Cu2OSeO3</definition>
+        <argsstring>(MomentField momentFieldIn)</argsstring>
+        <name>Cu2OSeO3</name>
+        <param>
+          <type><ref refid="class_moment_field" kindref="compound">MomentField</ref></type>
+          <declname>momentFieldIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MuDip/Crystals/Cu2OSeO3.h" line="18" column="1" bodyfile="MuDip/Crystals/Cu2OSeO3.cpp" bodystart="6" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Cu2OSeO3</label>
+        <link refid="class_cu2_o_se_o3"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Sample</label>
+        <link refid="class_sample"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cu2OSeO3</label>
+        <link refid="class_cu2_o_se_o3"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MomentField</label>
+        <link refid="class_moment_field"/>
+      </node>
+      <node id="5">
+        <label>Sample</label>
+        <link refid="class_sample"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>momentField</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MuDip/Crystals/Cu2OSeO3.h" line="16" column="1" bodyfile="MuDip/Crystals/Cu2OSeO3.h" bodystart="15" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_sample_1ad356d83b515e975e42c46c40e23bbd90" prot="protected" virt="non-virtual"><scope>Cu2OSeO3</scope><name>a</name></member>
+      <member refid="class_sample_1a4ad1d4eb0c1bcb32b5baad32b47363bb" prot="protected" virt="non-virtual"><scope>Cu2OSeO3</scope><name>atoms</name></member>
+      <member refid="class_cu2_o_se_o3_1ae23b756707e508607a52e11301fca560" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>Cu2OSeO3</name></member>
+      <member refid="class_sample_1a693eb5a6dfc3a4f436d4b7c135b0f23c" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>getA</name></member>
+      <member refid="class_sample_1a2d0d96d4a0ef717d69def676de75abd0" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>getAtoms</name></member>
+      <member refid="class_sample_1a3ca721744b709a5a6e76705b7583a31c" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>getDipoleField</name></member>
+      <member refid="class_sample_1aae12567d502fcc6bbd2a6a5e390250a4" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>getLorentzField</name></member>
+      <member refid="class_sample_1aed78766e8b673cf0390beb3e1702e471" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>getMomentField</name></member>
+      <member refid="class_sample_1ab500cba49bb9ec691d668cf8d82d1ea4" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>getTotalField</name></member>
+      <member refid="class_sample_1a243a77d8111d804e80d029d8ce74b873" prot="protected" virt="non-virtual"><scope>Cu2OSeO3</scope><name>momentField</name></member>
+      <member refid="class_sample_1ad18c855def3c90c997501c4a270229d4" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>Sample</name></member>
+      <member refid="class_sample_1ad50c28825937880216f85375f71c20dd" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>setA</name></member>
+      <member refid="class_sample_1a0569958ba8c7b59127f75c9026adff10" prot="public" virt="non-virtual"><scope>Cu2OSeO3</scope><name>setMomentField</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

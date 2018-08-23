@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_134b431747158f13c25c5bbf756bfc97" kind="dir">
+    <compoundname>MuDip</compoundname>
+    <innerdir refid="dir_8f7682d3dd606151a1ecb74631e78f3c">MuDip/Crystals</innerdir>
+    <innerfile refid="_bindings_8cpp">Bindings.cpp</innerfile>
+    <innerfile refid="_cell_atom_8cpp">CellAtom.cpp</innerfile>
+    <innerfile refid="_cell_atom_8h">CellAtom.h</innerfile>
+    <innerfile refid="_constants_8h">Constants.h</innerfile>
+    <innerfile refid="_dipole_8cpp">Dipole.cpp</innerfile>
+    <innerfile refid="_dipole_8h">Dipole.h</innerfile>
+    <innerfile refid="_lorentz_sphere_8cpp">LorentzSphere.cpp</innerfile>
+    <innerfile refid="_lorentz_sphere_8h">LorentzSphere.h</innerfile>
+    <innerfile refid="_moment_field_8cpp">MomentField.cpp</innerfile>
+    <innerfile refid="_moment_field_8h">MomentField.h</innerfile>
+    <innerfile refid="_sample_8cpp">Sample.cpp</innerfile>
+    <innerfile refid="_sample_8h">Sample.h</innerfile>
+    <innerfile refid="_spectrum_creator_8cpp">SpectrumCreator.cpp</innerfile>
+    <innerfile refid="_spectrum_creator_8h">SpectrumCreator.h</innerfile>
+    <innerfile refid="_vector_field_creator_8cpp">VectorFieldCreator.cpp</innerfile>
+    <innerfile refid="_vector_field_creator_8h">VectorFieldCreator.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MuDip/"/>
+  </compounddef>
+</doxygen>

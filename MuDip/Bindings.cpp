@@ -14,10 +14,10 @@ PYBIND11_MODULE(MuDip, m)
     py::class_<MomentField>(m, "MomentField")  // Should add all functions really
         // Constructors
         .def(py::init<py::array_t<double>>())
-        .def(py::init<py::array_t<double>, double, py::array_t<double>>())
+        .def(py::init<py::array_t<double>, double, py::array_t<double> >())
         .def(py::init<double, std::string>());
 
-    py::class_<Sample>(m, "Sample")  // The user shouldn't instantiate this but required to instantiate its child classes (only Cu2OSeO3 at present)
+    py::class_<Sample>(m, "Sample")  // The user shouldn't instantiate this but its child classes (only Cu2OSeO3 at present)
         .def(py::init<double, MomentField>())
         .def("getDipoleField", &Sample::getDipoleField)
         .def("getLorentzField", &Sample::getLorentzField)

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_lorentz_sphere_8h" kind="file" language="C++">
+    <compoundname>LorentzSphere.h</compoundname>
+    <includes refid="_dipole_8h" local="yes">Dipole.h</includes>
+    <includes refid="_sample_8h" local="yes">Sample.h</includes>
+    <includedby refid="_spectrum_creator_8h" local="yes">MuDip/SpectrumCreator.h</includedby>
+    <includedby refid="_vector_field_creator_8h" local="yes">MuDip/VectorFieldCreator.h</includedby>
+    <includedby refid="_lorentz_sphere_8cpp" local="yes">MuDip/LorentzSphere.cpp</includedby>
+    <includedby refid="_sample_8cpp" local="yes">MuDip/Sample.cpp</includedby>
+    <incdepgraph>
+      <node id="108">
+        <label>cmath</label>
+      </node>
+      <node id="111">
+        <label>MomentField.h</label>
+        <link refid="_moment_field_8h"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>string</label>
+      </node>
+      <node id="114">
+        <label>pybind11/numpy.h</label>
+      </node>
+      <node id="105">
+        <label>Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>CellAtom.h</label>
+        <link refid="_cell_atom_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>vector</label>
+      </node>
+      <node id="109">
+        <label>Sample.h</label>
+        <link refid="_sample_8h"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>MuDip/LorentzSphere.h</label>
+        <link refid="_lorentz_sphere_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="117">
+        <label>MuDip/VectorFieldCreator.h</label>
+        <link refid="_vector_field_creator_8h"/>
+      </node>
+      <node id="116">
+        <label>MuDip/SpectrumCreator.h</label>
+        <link refid="_spectrum_creator_8h"/>
+      </node>
+      <node id="115">
+        <label>MuDip/LorentzSphere.h</label>
+        <link refid="_lorentz_sphere_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_lorentz_sphere" prot="public">LorentzSphere</innerclass>
+    <briefdescription>
+<para>Evaluates the dipole and Lorentz fields for an arbitrary point. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ross Knapman </para></simplesect>
+<simplesect kind="date"><para>21/08/2018 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>INC_3DDIPOLEFIELD_LORENTZSPHERE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_3DDIPOLEFIELD_LORENTZSPHERE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dipole_8h" kindref="compound">Dipole.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sample_8h" kindref="compound">Sample.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_lorentz_sphere" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sample" kindref="compound">Sample</ref><sp/>sample;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius;<sp/><sp/></highlight><highlight class="comment">//<sp/>Radius<sp/>of<sp/>Lorentz<sp/>sphere<sp/>in<sp/>unit<sp/>cells<sp/>(i.e.<sp/>units<sp/>of<sp/>a<sp/>of<sp/>UnitCell)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Dipole&gt;<sp/>dipoles;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_lorentz_sphere" kindref="compound">LorentzSphere</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,<sp/><ref refid="class_sample" kindref="compound">Sample</ref><sp/>sampleIn,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radiusIn);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setX(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xIn)<sp/>{<sp/>x<sp/>=<sp/>xIn;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setY(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yIn)<sp/>{<sp/>y<sp/>=<sp/>yIn;<sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setZ(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zIn)<sp/>{<sp/>z<sp/>=<sp/>zIn;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSample(<ref refid="class_sample" kindref="compound">Sample</ref><sp/>sampleIn)<sp/>{<sp/>sample<sp/>=<sp/>sampleIn;<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRadius(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radiusIn)<sp/>{<sp/>radius<sp/>=<sp/>radiusIn;<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getX()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getY()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;<sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getZ()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>z;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getRadius()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>radius;<sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Dipole&gt;<sp/>getDipoles()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dipoles;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_lorentz_sphere_1a58e768d89c89cbb12759c49d36f0c9c0" kindref="member">calculateDipoleField</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_lorentz_sphere_1a061f2c2d2635348d94e14371a32f5758" kindref="member">calculateLorentzField</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//INC_3DDIPOLEFIELD_LORENTZSPHERE_H</highlight></codeline>
+    </programlisting>
+    <location file="MuDip/LorentzSphere.h"/>
+  </compounddef>
+</doxygen>

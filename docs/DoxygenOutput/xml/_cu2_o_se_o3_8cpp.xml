@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_cu2_o_se_o3_8cpp" kind="file" language="C++">
+    <compoundname>Cu2OSeO3.cpp</compoundname>
+    <includes refid="_cu2_o_se_o3_8h" local="yes">Cu2OSeO3.h</includes>
+    <includes refid="_sample_8h" local="yes">../Sample.h</includes>
+    <incdepgraph>
+      <node id="52">
+        <label>cmath</label>
+      </node>
+      <node id="53">
+        <label>MomentField.h</label>
+        <link refid="_moment_field_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>string</label>
+      </node>
+      <node id="56">
+        <label>pybind11/numpy.h</label>
+      </node>
+      <node id="50">
+        <label>Dipole.h</label>
+        <link refid="_dipole_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>Cu2OSeO3.h</label>
+        <link refid="_cu2_o_se_o3_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>CellAtom.h</label>
+        <link refid="_cell_atom_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>vector</label>
+      </node>
+      <node id="47">
+        <label>../Sample.h</label>
+        <link refid="_sample_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>MuDip/Crystals/Cu2OSeO3.cpp</label>
+        <link refid="_cu2_o_se_o3_8cpp"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cu2_o_se_o3_8h" kindref="compound">Cu2OSeO3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Sample.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>must<sp/>pass<sp/>this<sp/>crystal&apos;s<sp/>lattice<sp/>constant<sp/>a<sp/>=<sp/>8.925<sp/>Angstroms<sp/>to<sp/>the<sp/>base<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Cu2OSeO3::Cu2OSeO3(<ref refid="class_moment_field" kindref="compound">MomentField</ref><sp/>momentFieldIn)<sp/>:<sp/><ref refid="class_sample" kindref="compound">Sample</ref>(8.92500,<sp/>momentFieldIn)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>setMomentField(momentFieldIn);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.886000,<sp/>0.886000,<sp/>0.886000,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom1);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.614000,<sp/>0.114000,<sp/>0.386000,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom2);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom3<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.386000,<sp/>0.614000,<sp/>0.114000,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom3);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom4<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.114000,<sp/>0.386000,<sp/>0.614000,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom4);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom5<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.133500,<sp/>0.121100,<sp/>0.871900);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom5);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom6<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.871900,<sp/>0.133500,<sp/>0.121100);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom6);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom7<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.121100,<sp/>0.871900,<sp/>0.133500);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom7);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom8<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.366500,<sp/>0.878900,<sp/>0.371900);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom8);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom9<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.371900,<sp/>0.366500,<sp/>0.878900);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom9);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom10<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.878900,<sp/>0.371900,<sp/>0.366500);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom10);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom11<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.866500,<sp/>0.621100,<sp/>0.628100);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom11);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom12<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.628100,<sp/>0.866500,<sp/>0.621100);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom12);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom13<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.621100,<sp/>0.628100,<sp/>0.866500);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom13);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom14<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.633500,<sp/>0.378900,<sp/>0.128100);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom14);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom15<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.128100,<sp/>0.633500,<sp/>0.378900);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom15);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref><sp/>*atom16<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_atom" kindref="compound">CellAtom</ref>(0.378900,<sp/>0.128100,<sp/>0.633500);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>atoms.push_back(*atom16);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="MuDip/Crystals/Cu2OSeO3.cpp"/>
+  </compounddef>
+</doxygen>

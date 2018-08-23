@@ -1,0 +1,69 @@
+\hypertarget{class_lorentz_sphere}{}\section{Lorentz\+Sphere Class Reference}
+\label{class_lorentz_sphere}\index{Lorentz\+Sphere@{Lorentz\+Sphere}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a00145dd3c1b3cd744f856b0518264d44}\label{class_lorentz_sphere_a00145dd3c1b3cd744f856b0518264d44}} 
+{\bfseries Lorentz\+Sphere} (double x, double y, double z, \mbox{\hyperlink{class_sample}{Sample}} sample\+In, double radius\+In)
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a7f5c281dcbdada41e5d7db5404dba8ab}\label{class_lorentz_sphere_a7f5c281dcbdada41e5d7db5404dba8ab}} 
+void {\bfseries setX} (double x\+In)
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a94384f19a95a2013058b7cdec527a96a}\label{class_lorentz_sphere_a94384f19a95a2013058b7cdec527a96a}} 
+void {\bfseries setY} (double y\+In)
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a17f74d7f14c98cd51a085814517d8628}\label{class_lorentz_sphere_a17f74d7f14c98cd51a085814517d8628}} 
+void {\bfseries setZ} (double z\+In)
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a66f1189716e125df1b32875e21eb311a}\label{class_lorentz_sphere_a66f1189716e125df1b32875e21eb311a}} 
+void {\bfseries set\+Sample} (\mbox{\hyperlink{class_sample}{Sample}} sample\+In)
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a24e6213413e512ea209b1ecfaa074690}\label{class_lorentz_sphere_a24e6213413e512ea209b1ecfaa074690}} 
+void {\bfseries set\+Radius} (double radius\+In)
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a46ca3f3511a6a87723644d350fbb66ca}\label{class_lorentz_sphere_a46ca3f3511a6a87723644d350fbb66ca}} 
+double {\bfseries getX} ()
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_adc58278b6a0c645e6e0c5fd25fd79126}\label{class_lorentz_sphere_adc58278b6a0c645e6e0c5fd25fd79126}} 
+double {\bfseries getY} ()
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a5c195aa98a61f40c1c08ca1f9e5cb210}\label{class_lorentz_sphere_a5c195aa98a61f40c1c08ca1f9e5cb210}} 
+double {\bfseries getZ} ()
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_a92a635f089c0e5c5a2960518750f4c42}\label{class_lorentz_sphere_a92a635f089c0e5c5a2960518750f4c42}} 
+double {\bfseries get\+Radius} ()
+\item 
+\mbox{\Hypertarget{class_lorentz_sphere_aa65e38a2683e00d95971f5ebfcc20b7e}\label{class_lorentz_sphere_aa65e38a2683e00d95971f5ebfcc20b7e}} 
+std\+::vector$<$ \mbox{\hyperlink{class_dipole}{Dipole}} $>$ {\bfseries get\+Dipoles} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_lorentz_sphere_a58e768d89c89cbb12759c49d36f0c9c0}{calculate\+Dipole\+Field}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_lorentz_sphere_a061f2c2d2635348d94e14371a32f5758}{calculate\+Lorentz\+Field}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lorentz_sphere_a58e768d89c89cbb12759c49d36f0c9c0}\label{class_lorentz_sphere_a58e768d89c89cbb12759c49d36f0c9c0}} 
+\index{Lorentz\+Sphere@{Lorentz\+Sphere}!calculate\+Dipole\+Field@{calculate\+Dipole\+Field}}
+\index{calculate\+Dipole\+Field@{calculate\+Dipole\+Field}!Lorentz\+Sphere@{Lorentz\+Sphere}}
+\subsubsection{\texorpdfstring{calculate\+Dipole\+Field()}{calculateDipoleField()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Lorentz\+Sphere\+::calculate\+Dipole\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Evaluate the dipole field by summing up the contributions from the individual dipoles within the Lorentz sphere. \begin{DoxyReturn}{Returns}
+The dipole field as a vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lorentz_sphere_a061f2c2d2635348d94e14371a32f5758}\label{class_lorentz_sphere_a061f2c2d2635348d94e14371a32f5758}} 
+\index{Lorentz\+Sphere@{Lorentz\+Sphere}!calculate\+Lorentz\+Field@{calculate\+Lorentz\+Field}}
+\index{calculate\+Lorentz\+Field@{calculate\+Lorentz\+Field}!Lorentz\+Sphere@{Lorentz\+Sphere}}
+\subsubsection{\texorpdfstring{calculate\+Lorentz\+Field()}{calculateLorentzField()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Lorentz\+Sphere\+::calculate\+Lorentz\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Evaluate the Lorentz field for the Lorentz sphere. \begin{DoxyReturn}{Returns}
+The Lorentz field as a vector. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mu\+Dip/\mbox{\hyperlink{_lorentz_sphere_8h}{Lorentz\+Sphere.\+h}}\item 
+Mu\+Dip/Lorentz\+Sphere.\+cpp\end{DoxyCompactItemize}

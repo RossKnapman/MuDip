@@ -1,0 +1,67 @@
+\hypertarget{class_dipole}{}\section{Dipole Class Reference}
+\label{class_dipole}\index{Dipole@{Dipole}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dipole_a84a9daae2bdc84641ad90e0bcfb71e84}\label{class_dipole_a84a9daae2bdc84641ad90e0bcfb71e84}} 
+{\bfseries Dipole} (double x\+In, double y\+In, double z\+In, std\+::vector$<$ double $>$ moment\+In, double lattice\+Constant\+In)
+\item 
+\mbox{\Hypertarget{class_dipole_aaa7ffe92c7d2499a485e75c8c77272b8}\label{class_dipole_aaa7ffe92c7d2499a485e75c8c77272b8}} 
+void {\bfseries setX} (double x\+In)
+\item 
+\mbox{\Hypertarget{class_dipole_a743ebc256e831f6b2bebde453a2c6e18}\label{class_dipole_a743ebc256e831f6b2bebde453a2c6e18}} 
+void {\bfseries setY} (double y\+In)
+\item 
+\mbox{\Hypertarget{class_dipole_a8162082170fb5d541534d330a56c68ee}\label{class_dipole_a8162082170fb5d541534d330a56c68ee}} 
+void {\bfseries setZ} (double z\+In)
+\item 
+\mbox{\Hypertarget{class_dipole_ad1e29d380b5be78abe1941ffec3bd51d}\label{class_dipole_ad1e29d380b5be78abe1941ffec3bd51d}} 
+void {\bfseries set\+Moment} (std\+::vector$<$ double $>$ moment\+In)
+\item 
+\mbox{\Hypertarget{class_dipole_ae0325dcbd0156dd22b2d45dafb29eb47}\label{class_dipole_ae0325dcbd0156dd22b2d45dafb29eb47}} 
+void {\bfseries set\+Lattice\+Constant} (double lattice\+Constant\+In)
+\item 
+\mbox{\Hypertarget{class_dipole_af74377e645f1ab53b5f5c943f627d617}\label{class_dipole_af74377e645f1ab53b5f5c943f627d617}} 
+double {\bfseries getX} ()
+\item 
+\mbox{\Hypertarget{class_dipole_a888e62c6df4cbcbee9ceede2d559fb92}\label{class_dipole_a888e62c6df4cbcbee9ceede2d559fb92}} 
+double {\bfseries getY} ()
+\item 
+\mbox{\Hypertarget{class_dipole_abac4c549351bbf1caf9cca98862edb7e}\label{class_dipole_abac4c549351bbf1caf9cca98862edb7e}} 
+double {\bfseries getZ} ()
+\item 
+\mbox{\Hypertarget{class_dipole_a55d4136b363783c400d870dba2c90d0d}\label{class_dipole_a55d4136b363783c400d870dba2c90d0d}} 
+std\+::vector$<$ double $>$ {\bfseries get\+Moment} ()
+\item 
+\mbox{\Hypertarget{class_dipole_a2098715d78572a3b1718159be726537f}\label{class_dipole_a2098715d78572a3b1718159be726537f}} 
+double {\bfseries get\+Lattice\+Constant} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_dipole_a5027f01fb1bd8c04bfb635badee6be61}{calculate\+Field}} (double targetX, double targetY, double targetZ)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dipole_a5027f01fb1bd8c04bfb635badee6be61}\label{class_dipole_a5027f01fb1bd8c04bfb635badee6be61}} 
+\index{Dipole@{Dipole}!calculate\+Field@{calculate\+Field}}
+\index{calculate\+Field@{calculate\+Field}!Dipole@{Dipole}}
+\subsubsection{\texorpdfstring{calculate\+Field()}{calculateField()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Dipole\+::calculate\+Field (\begin{DoxyParamCaption}\item[{double}]{targetX,  }\item[{double}]{targetY,  }\item[{double}]{targetZ }\end{DoxyParamCaption})}
+
+Calculate the field due to a single dipole at an arbitrary point. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/position of the point at which we wish to evaluate the dipole field. \\
+\hline
+{\em y} & The y-\/position of the point at which we wish to evaluate the dipole field. \\
+\hline
+{\em z} & The z-\/position of the point at which we wish to evaluate the dipole field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dipole magnetic field as a vector. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mu\+Dip/\mbox{\hyperlink{_dipole_8h}{Dipole.\+h}}\item 
+Mu\+Dip/Dipole.\+cpp\end{DoxyCompactItemize}
