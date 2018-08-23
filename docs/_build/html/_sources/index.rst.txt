@@ -11,8 +11,8 @@ Welcome to MuDip's documentation!
 
    installation
    usage
-   API
    future
+   API
 
 
 Indices and tables

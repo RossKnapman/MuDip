@@ -11,7 +11,7 @@ Welcome to MuDip's documentation!
 
    installation
    usage
-   future
+   improvements
    API
 
 

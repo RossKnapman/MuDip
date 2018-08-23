@@ -55,17 +55,16 @@ py::array_t<double> VectorFieldCreator::outputBField()
 py::array_t<double> VectorFieldCreator::outputMField()
 {
     // Initialise the output array, which looks like [[x1, x2, ...], [y1, y1, ...], [m_x1, m_x2, ...], [m_y1, m_y2, ...]]
-    int componentLength = pow(((endCell - startCell) / resolution), 2) * sample.getAtoms().size();
+    int componentLength = pow(((endCell - startCell)), 2) * sample.getAtoms().size();
     py::array_t<double> outputMArray({4, componentLength});
     double Mindex = 0;
 
-    for (double j = startCell; j < endCell; j = j + resolution)
+    for (double j = startCell; j < endCell; j++)
     {
-        for (double i = startCell; i < endCell; i = i + resolution)
+        for (double i = startCell; i < endCell; i++)
         {
             for (int atomIndex = 0; atomIndex < sample.getAtoms().size(); atomIndex++)
             {
-
                 double atomXPos = i + sample.getAtoms()[atomIndex].getX();
                 double atomYPos = j + sample.getAtoms()[atomIndex].getY();
                 double atomZPos = z + sample.getAtoms()[atomIndex].getZ();
