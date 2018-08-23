@@ -9,9 +9,8 @@ Welcome to MuDip's documentation!
 .. toctree::
    :maxdepth: 2
 
-   usage
    installation
-   examples
+   usage
    API
    future
 

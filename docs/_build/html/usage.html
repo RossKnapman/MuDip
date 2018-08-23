@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" />
-    <link rel="prev" title="Welcome to MuDip’s documentation!" href="index.html" /> 
+    <link rel="next" title="API" href="API.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,10 +79,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#defining-the-magnetic-structure">Defining the Magnetic Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="API.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future.html">Future</a></li>
 </ul>
 
             
@@ -149,6 +153,41 @@
             
   <div class="section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="defining-the-magnetic-structure">
+<h2>Defining the Magnetic Structure<a class="headerlink" href="#defining-the-magnetic-structure" title="Permalink to this headline">¶</a></h2>
+<p>There are currently four magnetic textures that may be defined. These are</p>
+<ul class="simple">
+<li>Ferromagnetic alignment</li>
+<li>Antiferromagnetic alignment</li>
+<li>A single-wavevector helical spin configuration, as described by T. Lancaster et. al. <a class="footnote-reference" href="#id3" id="id1">[1]</a></li>
+<li>A triple-wavevector skyrmion-like spin configuration, as described by T. Lancaster et. al. <a class="footnote-reference" href="#id3" id="id2">[1]</a></li>
+</ul>
+<p>The initialisation of the magnetic structure depends on the arguments passed to its constructor. To define a ferromagnetically-aligned structure with spins parallel to the y-direction, one would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MuDip</span> <span class="k">import</span> <span class="n">MomentField</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">fourierComponent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">ferroMomentField</span> <span class="o">=</span> <span class="n">MomentField</span><span class="p">(</span><span class="n">fourierComponent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For an antiferromagnetically-aligned structure for which the progagation is along the x-axis with a wavelength of 10 unit cells, and the spins are aligned parallel to the y-axis, and , one would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MuDip</span> <span class="k">import</span> <span class="n">MomentField</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">propagationVector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">fourierComponent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">wavelength</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">antiFerroMomentField</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">MomentField</span><span class="p">(</span><span class="n">propagationVector</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">fourierComponent</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Lancaster, T., Williams, R. C., Thomas, I. O., Xiao, F., Pratt, F. L., Blundell, S. J., Loudon, J. C., Hesjedal, T., Clark, S. J., Hatton, P. D., Ciomaga Hatnean, M., Keeble, D. S. &amp; Balakrishnan, G. (2015). Transverse field muon-spin rotation signature of the skyrmion-lattice phase in Cu2OSeO3. Phys. Rev. B, 91, 224408.</td></tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -159,10 +198,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="API.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to MuDip’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
