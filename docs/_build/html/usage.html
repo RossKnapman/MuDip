@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Future" href="future.html" />
+    <link rel="next" title="Future Improvements" href="improvements.html" />
     <link rel="prev" title="Installation" href="installation.html" /> 
 
   
@@ -89,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="future.html">Future</a></li>
+<li class="toctree-l1"><a class="reference internal" href="improvements.html">Future Improvements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="API.html">API</a></li>
 </ul>
 
@@ -159,14 +159,14 @@
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="defining-the-magnetic-structure">
 <h2>Defining the Magnetic Structure<a class="headerlink" href="#defining-the-magnetic-structure" title="Permalink to this headline">¶</a></h2>
-<p>There are currently four magnetic textures that may be defined. These are</p>
+<p>There are currently four magnetic textures that may be defined. These are:</p>
 <ul class="simple">
 <li>Ferromagnetic alignment</li>
 <li>Antiferromagnetic alignment</li>
 <li>A single-wavevector helical spin configuration, as described by T. Lancaster et. al. <a class="footnote-reference" href="#id3" id="id1">[1]</a></li>
 <li>A triple-wavevector skyrmion-like spin configuration, as described by T. Lancaster et. al. <a class="footnote-reference" href="#id3" id="id2">[1]</a></li>
 </ul>
-<p>The initialisation of the magnetic structure depends on the arguments passed to its constructor. To define a ferromagnetically-aligned structure with spins parallel to the y-direction, one would run:</p>
+<p>Note that, for each of these methods, the magnitude of the magnetic moment on each atom is set to 0.25 Bohr magnetons. The initialisation of the magnetic structure depends on the arguments passed to its constructor. To define a ferromagnetically-aligned structure with spins parallel to the y-direction, one would run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">fourierComponent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -270,7 +270,7 @@
 <span class="n">magnitudeMap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">magnitudeMap</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">magnitudeMap</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">muonPositions</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">magnitudeMap</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">muonPositions</span><span class="p">)))))</span>
 </pre></div>
 </div>
-<p>Before defining arrays that ensure the colour map is scaled correctly along the axes:</p>
+<p>Then define arrays that ensure the colour map is scaled correctly along the axes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colourXValues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xValues</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xValues</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xValues</span><span class="p">)))))</span>
 <span class="n">colourYValues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">yValues</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yValues</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yValues</span><span class="p">)))))</span>
 </pre></div>
@@ -364,7 +364,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="future.html" class="btn btn-neutral float-right" title="Future" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="improvements.html" class="btn btn-neutral float-right" title="Future Improvements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

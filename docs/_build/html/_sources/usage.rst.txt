@@ -4,14 +4,14 @@ Usage
 Defining the Magnetic Structure
 -------------------------------
 
-There are currently four magnetic textures that may be defined. These are
+There are currently four magnetic textures that may be defined. These are:
 
 * Ferromagnetic alignment
 * Antiferromagnetic alignment
 * A single-wavevector helical spin configuration, as described by T. Lancaster et. al. [1]_
 * A triple-wavevector skyrmion-like spin configuration, as described by T. Lancaster et. al. [1]_
 
-The initialisation of the magnetic structure depends on the arguments passed to its constructor. To define a ferromagnetically-aligned structure with spins parallel to the y-direction, one would run: ::
+Note that, for each of these methods, the magnitude of the magnetic moment on each atom is set to 0.25 Bohr magnetons. The initialisation of the magnetic structure depends on the arguments passed to its constructor. To define a ferromagnetically-aligned structure with spins parallel to the y-direction, one would run: ::
 
     import MuDip
     import numpy as np
@@ -121,7 +121,7 @@ It is also possible to obtain a heatmap of the magnitude of the magnetic field, 
     magnitudeMap = np.sqrt(fieldXArray**2 + fieldYArray**2)
     magnitudeMap = np.reshape(magnitudeMap, (int(np.sqrt(len(magnitudeMap) * len(muonPositions))), int(np.sqrt(len(magnitudeMap) * len(muonPositions)))))
 
-Before defining arrays that ensure the colour map is scaled correctly along the axes: ::
+Then define arrays that ensure the colour map is scaled correctly along the axes: ::
 
     colourXValues = np.reshape(xValues, (int(np.sqrt(len(xValues))), int(np.sqrt(len(xValues)))))
     colourYValues = np.reshape(yValues, (int(np.sqrt(len(yValues))), int(np.sqrt(len(yValues)))))
