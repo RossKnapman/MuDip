@@ -48,10 +48,17 @@ py::array_t<double> VectorFieldCreator::outputBField()
             }
         }
     }
+
     return outputBArray;
 }
 
 
+/**
+*   Outputs the information required to plot the magnetic moment projected onto a 2D plane.
+*   @return A 2d array of the form [[x1, x2, ...], [y1, y1, ...], [M_x1, M_x2, ...], [M_y1, M_y2, ...]]
+*   where xi and yi are the x and y positions respectively, and Bxi and Byi are the x- and y-components
+*   of the magnetic fields at these points.
+*/
 py::array_t<double> VectorFieldCreator::outputMField()
 {
     // Initialise the output array, which looks like [[x1, x2, ...], [y1, y1, ...], [m_x1, m_x2, ...], [m_y1, m_y2, ...]]

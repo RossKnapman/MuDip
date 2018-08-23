@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage &mdash; MuDip  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Future Improvements" href="improvements.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MuDip
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#units">Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-the-magnetic-structure">Defining the Magnetic Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-the-crystal-structure">Defining the Crystal Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-the-magnetic-field-at-an-arbitrary-point-within-the-crystal">Obtaining the Magnetic Field at an Arbitrary Point within the Crystal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-the-magnetic-field-within-the-sample">Plotting the Magnetic Field within the Sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-magnetic-field-spectra">Obtaining Magnetic Field Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="improvements.html">Future Improvements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MuDip</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="units">
+<h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<p>The inputs and outputs of the module use units as tabulated:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="56%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Quantity</th>
+<th class="head">Units</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Magnetic moment</td>
+<td>Bohr  magnetons</td>
+</tr>
+<tr class="row-odd"><td>Magnetic structure wavelengths</td>
+<td>Unit cells</td>
+</tr>
+<tr class="row-even"><td>Magnetic fields</td>
+<td>Teslas</td>
+</tr>
+<tr class="row-odd"><td>Muon positions</td>
+<td>Fractional units (of unit cells)</td>
+</tr>
+<tr class="row-even"><td>Size and resolution of grid of unit cells</td>
+<td>Unit cells</td>
+</tr>
+<tr class="row-odd"><td>Lorentz sphere radius</td>
+<td>Unit cells</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="defining-the-magnetic-structure">
+<h2>Defining the Magnetic Structure<a class="headerlink" href="#defining-the-magnetic-structure" title="Permalink to this headline">¶</a></h2>
+<p>There are currently four magnetic textures that may be defined. These are:</p>
+<ul class="simple">
+<li>Ferromagnetic alignment</li>
+<li>Antiferromagnetic alignment</li>
+<li>A single-wavevector helical spin configuration, as described by T. Lancaster et. al. <a class="footnote-reference" href="#id3" id="id1">[1]</a></li>
+<li>A triple-wavevector skyrmion-like spin configuration, as described by T. Lancaster et. al. <a class="footnote-reference" href="#id3" id="id2">[1]</a></li>
+</ul>
+<p>Note that, for the last two methods for which the user does not define the magnetic moment on each atom explicitly, the magnitude of the magnetic moment on each dipole is 0.25 Bohr magnetons.</p>
+<p>The initialisation of the magnetic structure depends on the arguments passed to its constructor. To define a ferromagnetically-aligned structure with spins parallel to the y-direction, one would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">fourierComponent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Magnitude of one Bohr magneton</span>
+<span class="n">momentField</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">MomentField</span><span class="p">(</span><span class="n">fourierComponent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For an antiferromagnetically-aligned structure for which the propagation is along the x-axis with a wavelength of 10 unit cells, and the spins are aligned parallel to the y-axis, one would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">propagationVector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Direction only; the program normalises it anyway</span>
+<span class="n">wavelength</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">fourierComponent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">momentField</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">MomentField</span><span class="p">(</span><span class="n">propagationVector</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">,</span> <span class="n">fourierComponent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For the single-wavevector helical spin configuration, with a wavelength of 70 unit cells, one would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
+<span class="n">wavelength</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">momentField</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">MomentField</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="s2">&quot;singleK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Similarly, for the triple-wavevector skyrmion-like spin configuration, with a skyrmion wavelength of 70 unit cells, one would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
+<span class="n">wavelength</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">momentField</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">MomentField</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="s2">&quot;tripleK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="defining-the-crystal-structure">
+<h2>Defining the Crystal Structure<a class="headerlink" href="#defining-the-crystal-structure" title="Permalink to this headline">¶</a></h2>
+<p>Currently, the only crystal structure defined in MuDip is the Cu2OSeO3 crystal, which consists of 16 copper ions per (non-primitive) unit cell, four of which have their moment flipped with respect to the general magnetic moment structure. To define the crystal, a <a class="reference internal" href="API.html#_CPPv311MomentField" title="MomentField"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">MomentField</span></code></a> object is passed to the crystal as an argument, as in the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
+<span class="n">crystal</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">Cu2OSeO3</span><span class="p">(</span><span class="n">momentField</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="obtaining-the-magnetic-field-at-an-arbitrary-point-within-the-crystal">
+<h2>Obtaining the Magnetic Field at an Arbitrary Point within the Crystal<a class="headerlink" href="#obtaining-the-magnetic-field-at-an-arbitrary-point-within-the-crystal" title="Permalink to this headline">¶</a></h2>
+<p>To obtain the field due to the dipoles within a Lorentz sphere of radius 20 unit cells as a numpy array of the form [B_x, B_y, B_z], where B_i is the dipole magnetic field along the i-axis at position x = 3.4, y = 9.2, z = 10.1, where length units are specified in terms of unit cells, we would run the code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bdip</span> <span class="o">=</span> <span class="n">crystal</span><span class="o">.</span><span class="n">getDipoleField</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span> <span class="mf">9.2</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Similarly, for the Lorentz field:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Blor</span> <span class="o">=</span> <span class="n">crystal</span><span class="o">.</span><span class="n">getLorentzField</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span> <span class="mf">9.2</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And for the total (dipolar + Lorentz) field:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Btot</span> <span class="o">=</span> <span class="n">crystal</span><span class="o">.</span><span class="n">getTotalField</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span> <span class="mf">9.2</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting-the-magnetic-field-within-the-sample">
+<h2>Plotting the Magnetic Field within the Sample<a class="headerlink" href="#plotting-the-magnetic-field-within-the-sample" title="Permalink to this headline">¶</a></h2>
+<p>MuDip makes it relatively easy to obtain the projection of the magnetic field structure onto an arbitrary plane along the z-axis. After having defined the magnetic and crystal structures as previously described, we can create a <a class="reference internal" href="API.html#_CPPv318VectorFieldCreator" title="VectorFieldCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">VectorFieldCreator</span></code></a> object.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">muonPositions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.215</span><span class="p">,</span> <span class="mf">0.700</span><span class="p">,</span> <span class="mf">0.970</span><span class="p">]])</span>
+<span class="n">startCell</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">endCell</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">resolution</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Bapplied</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">10e-3</span><span class="p">])</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">vectorFieldCreator</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">VectorFieldCreator</span><span class="p">(</span><span class="n">momentField</span><span class="p">,</span> <span class="n">crystal</span><span class="p">,</span> <span class="n">muonPositions</span><span class="p">,</span> <span class="n">startCell</span><span class="p">,</span> <span class="n">endCell</span><span class="p">,</span> <span class="n">resolution</span><span class="p">,</span>
+                                          <span class="n">radius</span><span class="p">,</span> <span class="n">Bapplied</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will create a 100x100 grid of unit cells, where the magnetic field is sampled at a position of (0.215, 0.70, 0.970) within each unit cell (in fractional coordinates), every 5 cells, using a Lorentz sphere with a radius of 2 unit cells, and a field is applied along the z-direction of 1 mT. The we obtain the field’s projection in the z = 0 plane.</p>
+<p>We can then obtain an array of the form [[x1, x2, …], [y1, y1, …], [B_x1, B_x2, …], [B_y1, B_y2, …]] by calling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Barray</span> <span class="o">=</span> <span class="n">vectorFieldCreator</span><span class="o">.</span><span class="n">outputBField</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Where each component of the B-field is the total B-field (i.e. dipolar + Lorentz). We must process the output slightly in order to obtain a quiver plot. We first split the output into separate arrays:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">xValues</span> <span class="o">=</span> <span class="n">Barray</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># [x1, x2, x3, ...]</span>
+<span class="n">yValues</span> <span class="o">=</span> <span class="n">Barray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">fieldXArray</span> <span class="o">=</span> <span class="n">Barray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># [B_x1, B_x2, B_x3, ...]</span>
+<span class="n">fieldYArray</span> <span class="o">=</span> <span class="n">Barray</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For ease-of-interpretation of the quiver plot, it is useful to normalise the B-field vectors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fieldXArrayNormalised</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">fieldXArray</span><span class="p">)</span>
+<span class="n">fieldYArrayNormalised</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">fieldYArray</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xValues</span><span class="p">)))):</span>  <span class="c1"># The i in range of side length of grid (divided appropriately by the resolution)</span>
+  <span class="n">magnitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">fieldXArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fieldYArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">fieldXArrayNormalised</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fieldXArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">magnitude</span>
+  <span class="n">fieldYArrayNormalised</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fieldYArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">magnitude</span>
+</pre></div>
+</div>
+<p>We can then make the plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">xValues</span><span class="p">,</span> <span class="n">yValues</span><span class="p">,</span> <span class="n">fieldXArray</span><span class="p">,</span> <span class="n">fieldYArray</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s2">&quot;middle&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x (unit cells)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y (unit cells)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Which, for the triple-wavevector skyrmion-like state desribed earlier, will look like:</p>
+<img alt="_images/quiverOnly.png" src="_images/quiverOnly.png" />
+<p>It is also possible to obtain a heatmap of the magnitude of the magnetic field, albeit with a little more effort. We first create an array to store the magnitudes, and reshape it into a 2D array:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">magnitudeMap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">fieldXArray</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">fieldYArray</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">magnitudeMap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">magnitudeMap</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">magnitudeMap</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">muonPositions</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">magnitudeMap</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">muonPositions</span><span class="p">)))))</span>
+</pre></div>
+</div>
+<p>Then define arrays that ensure the colour map is scaled correctly along the axes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colourXValues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xValues</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xValues</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xValues</span><span class="p">)))))</span>
+<span class="n">colourYValues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">yValues</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yValues</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yValues</span><span class="p">)))))</span>
+</pre></div>
+</div>
+<p>Finally, we can plot this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cMesh</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolor</span><span class="p">(</span><span class="n">colourXValues</span><span class="p">,</span> <span class="n">colourYValues</span><span class="p">,</span> <span class="n">magnitudeMap</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;autumn&quot;</span><span class="p">))</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cMesh</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Magnetic Field Magnitude (mT)&quot;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>When this is overlayed on the previous quiver plot, the result looks like:</p>
+<img alt="_images/quiverWithColour.png" src="_images/quiverWithColour.png" />
+<p>We can also visualise the positions of the atoms, and the magnetic moments. As an example, we take a ferromagnetic arrangement of the magnetic moments aligned parallel to the y-axis. To visualise a 2x2 grid of such moments projected into the z-plane, we run the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">muonPositions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.215</span><span class="p">,</span> <span class="mf">0.700</span><span class="p">,</span> <span class="mf">0.970</span><span class="p">]])</span>
+<span class="n">startCell</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">endCell</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">resolution</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># This doesn&#39;t have any effect on the magnetic moment distribution but is required anyway to initialise VectorFieldCreator</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Bapplied</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">10e-3</span><span class="p">])</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">vectorFieldCreator</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">VectorFieldCreator</span><span class="p">(</span><span class="n">momentField</span><span class="p">,</span> <span class="n">crystal</span><span class="p">,</span> <span class="n">muonPositions</span><span class="p">,</span> <span class="n">startCell</span><span class="p">,</span> <span class="n">endCell</span><span class="p">,</span> <span class="n">resolution</span><span class="p">,</span>
+                                          <span class="n">radius</span><span class="p">,</span> <span class="n">Bapplied</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+
+<span class="n">Mfield</span> <span class="o">=</span> <span class="n">vectorFieldCreator</span><span class="o">.</span><span class="n">outputMField</span><span class="p">()</span>
+
+<span class="n">xValues</span> <span class="o">=</span> <span class="n">Mfield</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">yValues</span> <span class="o">=</span> <span class="n">Mfield</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">fieldXArray</span> <span class="o">=</span> <span class="n">Mfield</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">fieldYArray</span> <span class="o">=</span> <span class="n">Mfield</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">xValues</span><span class="p">,</span> <span class="n">yValues</span><span class="p">,</span> <span class="n">fieldXArray</span><span class="p">,</span> <span class="n">fieldYArray</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s2">&quot;middle&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x (unit cells)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y (unit cells)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Which produces the following plot:</p>
+<img alt="_images/magneticMoments.png" src="_images/magneticMoments.png" />
+<p>Note that four moments within each cell are flipped with respect to the general patten, as described earlier.</p>
+</div>
+<div class="section" id="obtaining-magnetic-field-spectra">
+<h2>Obtaining Magnetic Field Spectra<a class="headerlink" href="#obtaining-magnetic-field-spectra" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="API.html#_CPPv315SpectrumCreator" title="SpectrumCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SpectrumCreator</span></code></a> class allows us to sample the magnetic field magnitude at various points around the crystal. Currently, it arbitrarily samples the B-field component along the [1, 1, 1] axis. To obtain the list of the B-field components measured at two muon sites [0.215, 0.700, 0.970] and [0.035, 0.720, 0.805] (in fractional cell coordinates) for cells separated by 5 unit cells in a sphere running from 0 to 70 unit cells, with a Lorentz sphere radius of 2 unit cells, and an applied B-field of 10 mT along the z-axis, we would run the code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
+
+<span class="n">momentField</span> <span class="o">=</span> <span class="n">MuDipMomentField</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;tripleK&quot;</span><span class="p">)</span>
+<span class="n">crystal</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">Cu2OSeO3</span><span class="p">(</span><span class="n">momentField</span><span class="p">)</span>
+<span class="n">muonPositions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.215</span><span class="p">,</span> <span class="mf">0.700</span><span class="p">,</span> <span class="mf">0.970</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.035</span><span class="p">,</span> <span class="mf">0.720</span><span class="p">,</span> <span class="mf">0.805</span><span class="p">]])</span>
+<span class="n">startCell</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">endCell</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">resolution</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Bapplied</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">10e-3</span><span class="p">])</span>
+
+<span class="n">spectrumCreator</span> <span class="o">=</span> <span class="n">MuDip</span><span class="o">.</span><span class="n">SpectrumCreator</span><span class="p">(</span><span class="n">momentField</span><span class="p">,</span> <span class="n">crystal</span><span class="p">,</span> <span class="n">muonPositions</span><span class="p">,</span> <span class="n">startCell</span><span class="p">,</span> <span class="n">endCell</span><span class="p">,</span> <span class="n">resolution</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">Bapplied</span><span class="p">)</span>
+<span class="n">spectrum</span> <span class="o">=</span> <span class="n">spectrumCreator</span><span class="o">.</span><span class="n">outputSpectrum</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>From this, we can plot the frequency spectrum of various magnetic field strengths:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">spectrum</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;B (mT)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Spectral Intensity (AU)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Which looks like:</p>
+<img alt="_images/spectrum.png" src="_images/spectrum.png" />
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Lancaster, T., Williams, R. C., Thomas, I. O., Xiao, F., Pratt, F. L., Blundell, S. J., Loudon, J. C., Hesjedal, T., Clark, S. J., Hatton, P. D., Ciomaga Hatnean, M., Keeble, D. S. &amp; Balakrishnan, G. (2015). Transverse field muon-spin rotation signature of the skyrmion-lattice phase in Cu2OSeO3. Phys. Rev. B, 91, 224408.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="improvements.html" class="btn btn-neutral float-right" title="Future Improvements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Ross Knapman.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

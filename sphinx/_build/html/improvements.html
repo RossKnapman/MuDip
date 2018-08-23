@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Future Improvements &mdash; MuDip  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="API.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MuDip
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Future Improvements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#adding-more-magnetic-structures">Adding More Magnetic Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-more-crystal-structures">Adding More Crystal Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suggestions-for-minor-improvements">Suggestions for Minor Improvements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MuDip</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Future Improvements</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/improvements.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="future-improvements">
+<h1>Future Improvements<a class="headerlink" href="#future-improvements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="adding-more-magnetic-structures">
+<h2>Adding More Magnetic Structures<a class="headerlink" href="#adding-more-magnetic-structures" title="Permalink to this headline">¶</a></h2>
+<p>The primary aim of this project was to investigate more magnetic field structures, so it is very likely that the user would wish to add investigate more sophisticated magnetic field patterns than the four provided. To do this, the user must:</p>
+<ol class="arabic simple">
+<li>Add the necessary constructor to the MomentField.cpp implementation file, if none of the existing constructors accept the required set of parameters. This new constructor must also be declared in the MomentField.h header file.</li>
+<li>Update the MomentField.getType() function to return the corresponding magnetic field structure type.</li>
+<li>Update the MomentField.getMoment() function. This is where the bulk of the code describing the moment field goes.</li>
+<li>Add any new constructors to the Bindings.cpp file.</li>
+<li>Re-install the module.</li>
+</ol>
+</div>
+<div class="section" id="adding-more-crystal-structures">
+<h2>Adding More Crystal Structures<a class="headerlink" href="#adding-more-crystal-structures" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Within the Crystals directory, duplicate the Cu2OSeO3 implementation and header files and rename them to the name of the desired crystal.</li>
+<li>In the header file, replace all instances of Cu2OSeO3 with the name of the new crystal.</li>
+<li>In the implementation file, replace the 8.92500 in the argument for the Sample constructor with the side-length of the unit cell of the new crystal structure, in Angstroms. Note that, currently, all sides must be of the same length.</li>
+<li>Also in the implementation file, replace the <a class="reference internal" href="API.html#_CPPv38CellAtom" title="CellAtom"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CellAtom</span></code></a> objects with those containing information about the positions of the atoms of the new crystal within the unit cell in fractional coordinates, as well as whether or not the moment should be flipped with respect to the pattern defined by the <a class="reference internal" href="API.html#_CPPv311MomentField" title="MomentField"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">MomentField</span></code></a> (true corresponds to flipped).</li>
+<li>Update the Bindings.cpp file by copying and pasting the entry for Cu2OSeO3, and replacing the name accordingly.</li>
+<li>Re-install the module.</li>
+</ol>
+</div>
+<div class="section" id="suggestions-for-minor-improvements">
+<h2>Suggestions for Minor Improvements<a class="headerlink" href="#suggestions-for-minor-improvements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>More feedback when used from Python in terms of error messages; when the user, for example, uses a 1D array instead of a 2D array for the muon positions, it isn’t always clear what has gone wrong when the module fails to work.</li>
+<li>Currently, the feedback about the progress of the calculations is not clear. It would be nice if the user could see e.g. a progress bar, or even better information about what is going on.</li>
+<li>When creating a <a class="reference internal" href="API.html#_CPPv36Sample" title="Sample"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Sample</span></code></a> object, the user must pass a <a class="reference internal" href="API.html#_CPPv311MomentField" title="MomentField"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">MomentField</span></code></a> object as an argument. The user must also pass a <a class="reference internal" href="API.html#_CPPv311MomentField" title="MomentField"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">MomentField</span></code></a> object when instantiating <a class="reference internal" href="API.html#_CPPv315SpectrumCreator" title="SpectrumCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SpectrumCreator</span></code></a> and <a class="reference internal" href="API.html#_CPPv318VectorFieldCreator" title="VectorFieldCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">VectorFieldCreator</span></code></a>, which is not just inelegant, but also means things could go wrong if the user changes the name of the moment field that is passed to the <a class="reference internal" href="API.html#_CPPv36Sample" title="Sample"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Sample</span></code></a> and the <a class="reference internal" href="API.html#_CPPv315SpectrumCreator" title="SpectrumCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SpectrumCreator</span></code></a> or <a class="reference internal" href="API.html#_CPPv318VectorFieldCreator" title="VectorFieldCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">VectorFieldCreator</span></code></a>. It would be nice if <a class="reference internal" href="API.html#_CPPv315SpectrumCreator" title="SpectrumCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SpectrumCreator</span></code></a> and <a class="reference internal" href="API.html#_CPPv318VectorFieldCreator" title="VectorFieldCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">VectorFieldCreator</span></code></a> could obtain this information from the sample instead.</li>
+<li>Installation would be easier if the module were to be made pip-installable.</li>
+<li>The ability to load crystal information from .cif, rather than having to manually define the atom positions.</li>
+<li>Conversion of all std::vector&lt;double&gt; objects used internally to py::array_t&lt;double&gt; objects, so that more information can be accessed from Python.</li>
+<li>Support for if the unit cell side lengths a != b != c, and for if alpha != beta != gamma.</li>
+<li>I wrote this module during a summer internship, before which my experience of using C++ was minimal. Some code could probably be written more efficiently.</li>
+<li>The magnitude of each magnetic dipole is defined within the <a class="reference internal" href="API.html#_CPPv311MomentField" title="MomentField"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">MomentField</span></code></a> class. Would it make more sense to simply normalise it here, and define it within each unique crystal class instead?</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="API.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage.html" class="btn btn-neutral" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Ross Knapman.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
