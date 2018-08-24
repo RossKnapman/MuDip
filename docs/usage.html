@@ -270,7 +270,7 @@
                                           <span class="n">radius</span><span class="p">,</span> <span class="n">Bapplied</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This will create a 100x100 grid of unit cells, where the magnetic field is sampled at a position of (0.215, 0.70, 0.970) within each unit cell (in fractional coordinates), every 5 cells, using a Lorentz sphere with a radius of 2 unit cells, and a field is applied along the z-direction of 1 mT. The we obtain the field’s projection in the z = 0 plane.</p>
+<p>This will create a 100x100 grid of unit cells, where the magnetic field is sampled at a position of (0.215, 0.70, 0.970) within each unit cell (in fractional coordinates), every five cells along each axis, using a Lorentz sphere with a radius of 2 unit cells, and a field is applied along the z-direction of 1 mT. The we obtain the field’s projection in the z = 0 plane.</p>
 <p>We can then obtain an array of the form [[x1, x2, …], [y1, y1, …], [B_x1, B_x2, …], [B_y1, B_y2, …]] by calling:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Barray</span> <span class="o">=</span> <span class="n">vectorFieldCreator</span><span class="o">.</span><span class="n">outputBField</span><span class="p">()</span>
 </pre></div>
@@ -354,7 +354,7 @@
 </div>
 <div class="section" id="obtaining-magnetic-field-spectra">
 <h2>Obtaining Magnetic Field Spectra<a class="headerlink" href="#obtaining-magnetic-field-spectra" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference internal" href="API.html#_CPPv315SpectrumCreator" title="SpectrumCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SpectrumCreator</span></code></a> class allows us to sample the magnetic field magnitude at various points around the crystal. Currently, it arbitrarily samples the B-field component along the [1, 1, 1] axis. To obtain the list of the B-field components measured at two muon sites [0.215, 0.700, 0.970] and [0.035, 0.720, 0.805] (in fractional cell coordinates) for cells separated by 5 unit cells in a sphere running from 0 to 70 unit cells, with a Lorentz sphere radius of 2 unit cells, and an applied B-field of 10 mT along the z-axis, we would run the code:</p>
+<p>The <a class="reference internal" href="API.html#_CPPv315SpectrumCreator" title="SpectrumCreator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SpectrumCreator</span></code></a> class allows us to sample the magnetic field magnitude at various points around the crystal. Currently, it arbitrarily samples the B-field component along the [1, 1, 1] axis. To obtain, for example, the list of the B-field components measured at two muon sites [0.215, 0.700, 0.970] and [0.035, 0.720, 0.805] (in fractional cell coordinates) for cells separated by five unit cells along each axis in a sphere running from 0 to 70 unit cells, with a Lorentz sphere radius of 2 unit cells, and an applied B-field of 10 mT along the z-axis, we would run the code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuDip</span>
 
 <span class="n">momentField</span> <span class="o">=</span> <span class="n">MuDipMomentField</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;tripleK&quot;</span><span class="p">)</span>
