@@ -1,7 +1,7 @@
 Installation
 ============
 
-To install this module, type the following commands into a terminal ::
+To install this module, type the following commands into a terminal: ::
 
     git clone https://github.com/RossKnapman/MuDip.git
     cd MuDip
