@@ -1,6 +1,6 @@
 # MuDip
 
-A Python module to investigate magentic fields within crystal structures. The full documentation can be found [here](https://rossknapman.github.io/MuDip/).
+A Python module to investigate magentic fields within crystal structures, allowing the visualisation of fields within the crystal and the generation of field probability distributions. The full documentation can be found [here](https://rossknapman.github.io/MuDip/).
 
 ## Installation
 
