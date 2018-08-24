@@ -24,7 +24,7 @@ Adding More Crystal Structures
 
 #. In the header file, replace all instances of Cu2OSeO3 with the name of the new crystal.
 
-#. In the implementation file, replace the 8.92500 in the argument for the Sample constructor with the side-length of the unit cell of the new crystal structure, in Angstroms. Note that, currently, all sides must be of the same length.
+#. In the implementation file, replace the 8.92500 in the argument for the Sample constructor with the side-length of the unit cell of the new crystal structure in Ångstroms. Note that, currently, all sides must be of the same length.
 
 #. Also in the implementation file, replace the :cpp:class:`CellAtom` objects with those containing information about the positions of the atoms of the new crystal within the unit cell in fractional coordinates, as well as whether or not the moment should be flipped with respect to the pattern defined by the :cpp:class:`MomentField` (true corresponds to flipped).
 
@@ -38,15 +38,15 @@ Suggestions for Minor Improvements
 
 * More feedback when used from Python in terms of error messages; when the user, for example, uses a 1D array instead of a 2D array for the muon positions, it isn't always clear what has gone wrong when the module fails to work.
 
-* Currently, the feedback about the progress of the calculations is not clear. It would be nice if the user could see e.g. a progress bar, or even better information about what is going on.
+* Currently, the feedback about the progress of the calculations is not clear. It would be nice if the user could see e.g. a progress bar, or even better information about what is going on, rather than simply a flurry of numbers.
 
 * When creating a :cpp:class:`Sample` object, the user must pass a :cpp:class:`MomentField` object as an argument. The user must also pass a :cpp:class:`MomentField` object when instantiating :cpp:class:`SpectrumCreator` and :cpp:class:`VectorFieldCreator`, which is not just inelegant, but also means things could go wrong if the user changes the name of the moment field that is passed to the :cpp:class:`Sample` and the :cpp:class:`SpectrumCreator` or :cpp:class:`VectorFieldCreator`. It would be nice if :cpp:class:`SpectrumCreator` and :cpp:class:`VectorFieldCreator` could obtain this information from the sample instead.
 
 * Installation would be easier if the module were to be made pip-installable.
 
-* The ability to load crystal information from .cif, rather than having to manually define the atom positions.
+* The ability to load crystal information from .cif files, rather than having to manually define the atom positions.
 
-* Conversion of all std::vector<double> objects used internally to py::array_t<double> objects, so that more information can be accessed from Python.
+* Conversion of all std::vector<double> objects used internally to py::array_t<double> objects, so that more information can be accessed from Python (and corresponding access to getter and setter methods from Python by updating the Bindings.cpp file accordingly).
 
 * Support for if the unit cell side lengths a != b != c, and for if alpha != beta != gamma.
 

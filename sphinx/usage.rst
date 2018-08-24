@@ -101,7 +101,7 @@ MuDip makes it relatively easy to obtain the projection of the magnetic field st
     vectorFieldCreator = MuDip.VectorFieldCreator(momentField, crystal, muonPositions, startCell, endCell, resolution,
                                               radius, Bapplied, z)
 
-This will create a 100x100 grid of unit cells, where the magnetic field is sampled at a position of (0.215, 0.70, 0.970) within each unit cell (in fractional coordinates), every 5 cells, using a Lorentz sphere with a radius of 2 unit cells, and a field is applied along the z-direction of 1 mT. The we obtain the field's projection in the z = 0 plane.
+This will create a 100x100 grid of unit cells, where the magnetic field is sampled at a position of (0.215, 0.70, 0.970) within each unit cell (in fractional coordinates), every five cells along each axis, using a Lorentz sphere with a radius of 2 unit cells, and a field is applied along the z-direction of 1 mT. The we obtain the field's projection in the z = 0 plane.
 
 We can then obtain an array of the form [[x1, x2, ...], [y1, y1, ...], [B_x1, B_x2, ...], [B_y1, B_y2, ...]] by calling: ::
 
@@ -194,7 +194,7 @@ Note that four moments within each cell are flipped with respect to the general 
 Obtaining Magnetic Field Spectra
 --------------------------------
 
-The :cpp:class:`SpectrumCreator` class allows us to sample the magnetic field magnitude at various points around the crystal. Currently, it arbitrarily samples the B-field component along the [1, 1, 1] axis. To obtain the list of the B-field components measured at two muon sites [0.215, 0.700, 0.970] and [0.035, 0.720, 0.805] (in fractional cell coordinates) for cells separated by 5 unit cells in a sphere running from 0 to 70 unit cells, with a Lorentz sphere radius of 2 unit cells, and an applied B-field of 10 mT along the z-axis, we would run the code: ::
+The :cpp:class:`SpectrumCreator` class allows us to sample the magnetic field magnitude at various points around the crystal. Currently, it arbitrarily samples the B-field component along the [1, 1, 1] axis. To obtain, for example, the list of the B-field components measured at two muon sites [0.215, 0.700, 0.970] and [0.035, 0.720, 0.805] (in fractional cell coordinates) for cells separated by five unit cells along each axis in a sphere running from 0 to 70 unit cells, with a Lorentz sphere radius of 2 unit cells, and an applied B-field of 10 mT along the z-axis, we would run the code: ::
 
     import MuDip
 
